@@ -1,0 +1,10 @@
+{
+    "name": "BusinessProcessMapping",
+    "alias": "Business Process Mapping",
+    "description": "",
+    "priority": 1105,
+    "version": 1.5,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "business-process-mapping"
+}

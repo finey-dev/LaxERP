@@ -1,0 +1,1529 @@
+{
+    "customer-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/customers",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "customer",
+                    "email": "customer@example.com",
+                    "mobile_no": "9898989898",
+                    "contact": "9898989898",
+                    "tax_number": "Vf686FJVJ789415GBJ",
+                    "billing_name": "Office address",
+                    "billing_country": "India",
+                    "billing_state": "gujrat",
+                    "billing_city": "surat",
+                    "billing_phone": "7898945656",
+                    "billing_zip": "424242",
+                    "billing_address": "132, My Street",
+                    "shipping_name": "Office address",
+                    "shipping_country": "India",
+                    "shipping_state": "gujrat",
+                    "shipping_city": "surat",
+                    "shipping_phone": "7898945656",
+                    "shipping_zip": "424242",
+                    "shipping_address": "132, My Street"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Customer Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/customer/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "customer",
+            "contact":"9898989898",
+            "email":"customer@gmail.com",
+            "password":"12345678",
+            "tax_number":"GJGUYUIG678568BGJU4",
+            "billing_name":"Office address",
+            "billing_phone":"7898945656",
+            "billing_zip": "424242",
+            "billing_address": "132, My Street",
+            "billing_country": "India",
+            "billing_state": "gujrat",
+            "billing_city": "surat",
+            "shipping_name": "Office address",
+            "shipping_country": "India",
+            "shipping_state": "gujrat",
+            "shipping_city": "surat",
+            "shipping_phone": "7898945656",
+            "shipping_zip": "424242",
+            "shipping_address": "132, My Street"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Customer details successfully saved!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Customer Role Not found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/customer/:customer_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "id": 1,
+                "name": "customer",
+                "email": "customer@example.com",
+                "mobile_no": "9898989898",
+                "contact": "9898989898",
+                "tax_number": "Vf686FJVJ789415GBJ",
+                "billing_name": "Office address",
+                "billing_country": "India",
+                "billing_state": "gujrat",
+                "billing_city": "surat",
+                "billing_phone": "7898945656",
+                "billing_zip": "424242",
+                "billing_address": "132, My Street",
+                "shipping_name": "Office address",
+                "shipping_country": "India",
+                "shipping_state": "gujrat",
+                "shipping_city": "surat",
+                "shipping_phone": "7898945656",
+                "shipping_zip": "424242",
+                "shipping_address": "132, My Street"
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Customer Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/customer/update/:customer_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "customer",
+            "contact":"9898989898",
+            "tax_number":"GJGUYUIG678568BGJU4",
+            "billing_name":"Office address",
+            "billing_phone":"7898945656",
+            "billing_zip": "424242",
+            "billing_address": "132, My Street",
+            "billing_country": "India",
+            "billing_state": "gujrat",
+            "billing_city": "surat",
+            "shipping_name": "Office address",
+            "shipping_country": "India",
+            "shipping_state": "gujrat",
+            "shipping_city": "surat",
+            "shipping_phone": "7898945656",
+            "shipping_zip": "424242",
+            "shipping_address": "132, My Street"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Customer successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Customer Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-delete":{
+        "method"        : "DELETE",
+        "endpoints"           : "/api/:workspace_slug/customer/delete/:customer_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Customer successfully Deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Customer Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "vendor-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/vendors",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 46,
+                    "name": "vendor",
+                    "email": "vendor@gmail.com",
+                    "mobile_no": "9898989889",
+                    "contact": "9898989889",
+                    "tax_number": "GSTIN5643245585145",
+                    "billing_name": "billing name",
+                    "billing_country": "India",
+                    "billing_state": "gujrat",
+                    "billing_city": "surat",
+                    "billing_phone": "7898945656",
+                    "billing_zip": "424242",
+                    "billing_address": "132, My Street",
+                    "shipping_name": "shipping name",
+                    "shipping_country": "India",
+                    "shipping_state": "gujrat",
+                    "shipping_city": "surat",
+                    "shipping_phone": "7898945656",
+                    "shipping_zip": "424242",
+                    "shipping_address": "132, My Street",
+                    "balance": 0,
+                    "debit_note_balance": "0.00"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Vendor Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "vendor-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/vendor/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "vendor",
+            "contact":"9898989898",
+            "email":"vendor@example.com",
+            "password":"12345678",
+            "tax_number":"GJGUYUIG678568BGJU4",
+            "billing_name":"Office address",
+            "billing_phone":"7898945656",
+            "billing_zip": "424242",
+            "billing_address": "132, My Street",
+            "billing_country": "India",
+            "billing_state": "gujrat",
+            "billing_city": "surat",
+            "shipping_name": "vendor name",
+            "shipping_country": "India",
+            "shipping_state": "gujrat",
+            "shipping_city": "surat",
+            "shipping_phone": "7898945656",
+            "shipping_zip": "424242",
+            "shipping_address": "132, My Street"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Vendor successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Vendor Role Not found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "vendor-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/vendor/:vendor_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "name": "vendor",
+                "email": "vendor@gmail.com",
+                "contact": "9898989889",
+                "tax_number": "GSTIN5643245585145",
+                "billing_name": "vendor name",
+                "billing_country": "India",
+                "billing_state": "gujrat",
+                "billing_city": "surat",
+                "billing_phone": "7898945656",
+                "billing_zip": "424242",
+                "billing_address": "132, My Street",
+                "shipping_name": "vendor name",
+                "shipping_country": "India",
+                "shipping_state": "gujrat",
+                "shipping_city": "surat",
+                "shipping_phone": "7898945656",
+                "shipping_zip": "424242",
+                "shipping_address": "132, My Street",
+                "balance": 0,
+                "debit_note_balance": "0.00"
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Vendor Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "vendor-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/vendor/update/:vendor_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "vendor",
+            "contact":"9898989898",
+            "password":"12345678",
+            "tax_number":"GJGUYUIG678568BGJU4",
+            "billing_name":"Office address",
+            "billing_phone":"7898945656",
+            "billing_zip": "424242",
+            "billing_address": "132, My Street",
+            "billing_country": "India",
+            "billing_state": "gujrat",
+            "billing_city": "surat",
+            "shipping_name": "vendor name",
+            "shipping_country": "India",
+            "shipping_state": "gujrat",
+            "shipping_city": "surat",
+            "shipping_phone": "7898945656",
+            "shipping_zip": "424242",
+            "shipping_address": "132, My Street"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Vendor successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Vendor Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "vendor-delete":{
+        "method"        : "DELETE",
+        "endpoints"           : "/api/:workspace_slug/vendor/delete/:vendor_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Vendor successfully Deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Vendor Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-account-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/bank-accounts",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "holder_name": "holder name",
+                    "bank_name": "Bank name",
+                    "bank_type": "bank",
+                    "wallet_type": null,
+                    "opening_balance": 1000,
+                    "contact_number": "9898989898",
+                    "bank_address": "bank address",
+                    "bank_branch": "bank branch name",
+                    "swift": "4354151",
+                    "chart_account_name": "chart account name"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-account-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/bank-account/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "holder_name": "holder name",
+            "bank_name": "Bank name",
+            "bank_type": "bank \\ must be in bank,wallet",
+            "wallet_type": "stripe \\ must be in stripe,paypal",
+            "opening_balance": 1000,
+            "contact_number": "9898989898",
+            "account_number":"000075751214",
+            "bank_address": "bank address",
+            "bank_branch": "bank branch name",
+            "swift": "4354151",
+            "chart_account": "1 \\ id of chart_of_account"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Bank Account successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Account Module Not Active!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-account-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/bank-account/update/:bank_account_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "holder_name": "holder name",
+            "bank_name": "Bank name",
+            "bank_type": "bank \\ must be in bank,wallet",
+            "wallet_type": "stripe \\ must be in stripe,paypal",
+            "opening_balance": 1000,
+            "contact_number": "9898989898",
+            "account_number":"000075751214",
+            "bank_address": "bank address",
+            "bank_branch": "bank branch name",
+            "swift": "4354151",
+            "chart_account": "1 \\ id of chart_of_account"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Bank Account successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Account Module Not Active!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-account-delete":{
+        "method"        : "DELETE",
+        "endpoints"           : "/api/:workspace_slug/bank-account/delete/:bank_account_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Bank Account successfully Deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Bank Account Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "chart-of-account-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/chart-of-accounts",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "Checking Account",
+                    "code": 1060,
+                    "description": null
+                },
+                {
+                    "id": 2,
+                    "name": "Petty Cash",
+                    "code": 1065,
+                    "description": null
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "chart-of-account-sub-type-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/chart-of-account-sub-types",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "Assets": {
+                    "1": "Current Asset",
+                    "2": "Inventory Asset",
+                    "3": "Non-current Asset"
+                },
+                "Liabilities": {
+                    "4": "Current Liabilities",
+                    "5": "Long Term Liabilities",
+                    "6": "Share Capital",
+                    "7": "Retained Earnings"
+                },
+                "Equity": {
+                    "8": "Owners Equity"
+                },
+                "Income": {
+                    "9": "Sales Revenue",
+                    "10": "Other Revenue"
+                },
+                "Costs of Goods Sold": {
+                    "11": "Costs of Goods Sold"
+                },
+                "Expenses": {
+                    "12": "Payroll Expenses",
+                    "13": "General and Administrative expenses"
+                }
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "chart-of-account-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/chart-of-account/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "manager",
+            "code":"1061",
+            "sub_type":"4 \\ id of chart-of-account-sub-type-list",
+            "is_enabled":1,
+            "description":"Wrirte description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Chart Of Account successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "chart-of-account-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/chart-of-account/update/:chart_of_account_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "manager",
+            "code":"1061",
+            "sub_type":"4 \\ id of chart-of-account-sub-type-list",
+            "is_enabled":1,
+            "description":"Wrirte description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Chart Of Account successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "chart-of-account-delete":{
+        "method"        : "DELETE",
+        "endpoints"           : "/api/:workspace_slug/chart-of-account/delete/:chart_of_account_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Chart Of Account successfully deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Chart Of Account Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-transfer-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/bank-transfer",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "from_account": "Jesse Mayo",
+                    "to_account": "johns",
+                    "from_type": "bank",
+                    "to_type": "bank",
+                    "amount": "$1,200",
+                    "date": "21-02-2024",
+                    "reference": "reference",
+                    "description": "description"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-transfer-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/bank-transfer/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "from_type" : "bank \\ must be in bank,wallet",
+            "to_type":"wallet \\ must be in bank,wallet",
+            "from_account":"8 \\ id of bank-account",
+            "to_account":"8 \\ id of bank-account",
+            "amount":1000,
+            "date":"2024-03-15",
+            "reference":"reference",
+            "description":"Write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Amount successfully transfer!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-transfer-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/bank-transfer/update/:transfer_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "from_type" : "bank \\ must be in bank,wallet",
+            "to_type":"wallet \\ must be in bank,wallet",
+            "from_account":"8 \\ id of bank-account",
+            "to_account":"8 \\ id of bank-account",
+            "amount":1000,
+            "date":"2024-03-15",
+            "reference":"reference",
+            "description":"Write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Transfer Amount successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Transfer not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bank-transfer-delete":{
+        "method"        : "DELETE",
+        "endpoints"           : "/api/:workspace_slug/bank-transfer/delete/:transfer_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Transfer Amount successfully deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Transfer Amount Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "revenue-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/revenues",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "date": "14-02-2024",
+                    "amount": "$1,500",
+                    "account_name": "Jesse Mayo",
+                    "customer": "customer",
+                    "category": "Maintenance Sales",
+                    "reference": "references",
+                    "description": "description"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "revenue-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/revenue/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "date":"2024-02-12",
+            "amount":1000,
+            "account_id":"8 \\ come from account id",
+            "customer_id":"3 \\ come from customer id",
+            "category_id": "3 \\ come from category id",
+            "reference":"reference",
+            "description":"write description",
+            "add_receipt":"you can attach file here"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Revenue successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "revenue-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/revenue/update/:revenue_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "date":"2024-02-12",
+            "amount":1000,
+            "account_id":"8 \\ come from account id",
+            "customer_id":"3 \\ come from customer id",
+            "category_id": "3 \\ come from category id",
+            "reference":"reference",
+            "description":"write description",
+            "add_receipt":"you can attach file here"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Revenue successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Revenue Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "revenue-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/revenue/delete/:revenue_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Revenue successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Revenue Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-credit-note-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/customer-credit-notes",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "invoice": "#INVO000001",
+                    "customer": "customer",
+                    "date": "06-02-2024",
+                    "amount": "$100",
+                    "description": "description",
+                    "status": "Partially Used"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-credit-note-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/customer-credit-notes/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "invoice_id":"1 \\ id of invoice",
+            "amount":"100",
+            "date":"2023-05-23",
+            "description":"description here"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Credit Note successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-credit-note-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/customer-credit-notes/update/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "invoice_id":"1 \\ id of invoice",
+            "amount":"100",
+            "date":"2023-05-23",
+            "status":"Partially Used \\ must be in:Pending,Partially Used,Fully Used",
+            "description":"description here"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Credit Note successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Credit Note Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "customer-credit-note-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/customer-credit-notes/delete/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Credit Note successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Credit Note Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "expense-payment-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/payments",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "date": "06-09-2024",
+                    "amount": "$120.0",
+                    "description": "keeping your cash flow.",
+                    "reference": "keeping your cash flow.",
+                    "bank_name": "Quantum Trust Bank",
+                    "holder_name": "Carissa Valenzuela",
+                    "vendors_name": "Kelly Brook",
+                    "category_name": "Rent Or Lease"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "expense-payment-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/payment/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "date":"2023-05-23",
+            "amount":"150",
+            "account_id":"8",
+            "category_id":"4",
+            "vendor_id":"2",
+            "reference":"references",
+            "description":"write description description",
+            "add_receipt":"attach file here"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Payment successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "expense-payment-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/payment/update/:payment_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "date":"2023-05-23",
+            "amount":"150",
+            "account_id":"8",
+            "category_id":"4",
+            "vendor_id":"2",
+            "reference":"references",
+            "description":"write description description",
+            "add_receipt":"attach file here"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Payment successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Payment Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "expense-payment-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/payment/delete/:payment_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Payment successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Payment Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bills-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/bills",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "bill_number": "#BILL00001",
+                    "account_type": "Accounting",
+                    "bill_date": "21-02-2024",
+                    "due_date": "21-02-2024",
+                    "due_amount": "$142",
+                    "order_number": 2147483647,
+                    "bill_module": "account",
+                    "vendor_name": "vendor",
+                    "status": "Draft",
+                    "vendor": {
+                        "id": 1,
+                        "name": "vendor",
+                        "email": "vendor@gmail.com",
+                        "contact": "9898989889",
+                        "tax_number": "GSTIN5643245585145"
+                    },
+                    "items": [
+                        {
+                            "id": 1,
+                            "product_type": "product",
+                            "quantity": 1,
+                            "price": 122,
+                            "tax": [
+                                {
+                                    "id": 1,
+                                    "name": "GST",
+                                    "rate": "10"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "SGST",
+                                    "rate": "6"
+                                }
+                            ],
+                            "discount": 0,
+                            "description": "description"
+                        }
+                    ],
+                    "accounts": [
+                        {
+                            "id": 1,
+                            "price": "$122",
+                            "description": "description",
+                            "type": "Bill"
+                        }
+                    ],
+                    "category": {
+                        "id": 4,
+                        "name": "Rent Or Lease",
+                        "color": "#000000"
+                    }
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bill-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/bill/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "requestdata-for-project-bill":{
+                "bill_type":"project \\must be in project,product",
+                "account_type":"Projects \\ must be in Accounting,Projects",
+                "vendor_id":"2 \\ come from vendors id",
+                "bill_date":"2024-03-18",
+                "due_date":"2024-03-18",
+                "project":"6 \\ come from project id",
+                "order_number":"020230522085059",
+                "tax" : "[1,2] \\ come from tax table and select multiple tax ids",
+                "items":[
+                    {
+                        "item":"5 \\ id of selected project's task",
+                        "price":"10",
+                        "quantity":"1",
+                        "discount":"0",
+                        "itemTaxPrice":"0.00",
+                        "description":"This is description"
+                    }
+                ]
+            },
+            "requestdata-for-product-bill":{
+                "bill_type" : "product \\must be in project,product",
+                "account_type":"Accounting \\ must be in Accounting,Projects",
+                "vendor_id":"2 \\ come from vendors id",
+                "bill_date":"2024-03-19",
+                "due_date":"2024-03-19",
+                "category_id":"4 \\ come from category id",
+                "order_number":"12457852584",
+                "items":[
+                    {
+                        "product_type":"product",
+                        "item":"2 \\ id of product and service",
+                        "quantity":"1",
+                        "price":120,
+                        "discount":"0",
+                        "tax":"[1,2] \\ tax of product and service",
+                        "chart_account_id":"13 \\ come from chart of account",
+                        "description":"write description"
+                    }
+                ]
+            }
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Bill successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bill-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/bill-detail/:bill_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data":
+                {
+                    "id": 1,
+                    "bill_number": "#BILL00001",
+                    "account_type": "Accounting",
+                    "bill_date": "21-02-2024",
+                    "due_date": "21-02-2024",
+                    "due_amount": "$142",
+                    "order_number": 2147483647,
+                    "bill_module": "account",
+                    "vendor_name": "vendor",
+                    "status": "Draft",
+                    "vendor": {
+                        "id": 1,
+                        "name": "vendor",
+                        "email": "vendor@gmail.com",
+                        "contact": "9898989889",
+                        "tax_number": "GSTIN5643245585145"
+                    },
+                    "items": [
+                        {
+                            "id": 1,
+                            "product_type": "product",
+                            "quantity": 1,
+                            "price": 122,
+                            "tax": [
+                                {
+                                    "id": 1,
+                                    "name": "GST",
+                                    "rate": "10"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "SGST",
+                                    "rate": "6"
+                                }
+                            ],
+                            "discount": 0,
+                            "description": "description"
+                        }
+                    ],
+                    "accounts": [
+                        {
+                            "id": 1,
+                            "price": "$122",
+                            "description": "description",
+                            "type": "Bill"
+                        }
+                    ],
+                    "category": {
+                        "id": 4,
+                        "name": "Rent Or Lease",
+                        "color": "#000000"
+                    }
+                }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bill-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/bill/update/:bill_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "requestdata-for-project-bill":{
+                "bill_type":"project \\must be in project,product",
+                "account_type":"Projects \\ must be in Accounting,Projects",
+                "vendor_id":"2 \\ come from vendors id",
+                "bill_date":"2024-03-18",
+                "due_date":"2024-03-18",
+                "project":"6 \\ come from project id",
+                "order_number":"020230522085059",
+                "tax" : "[1,2] \\ come from tax table and select multiple tax ids",
+                "items":[
+                    {
+                        "id":"1 \\items id",
+                        "item":"5 \\ id of selected project's task",
+                        "price":"10",
+                        "quantity":"1",
+                        "discount":"0",
+                        "itemTaxPrice":"0.00",
+                        "description":"This is description"
+                    }
+                ]
+            },
+            "requestdata-for-product-bill":{
+                "bill_type" : "product \\must be in project,product",
+                "account_type":"Accounting \\ must be in Accounting,Projects",
+                "vendor_id":"2 \\ come from vendors id",
+                "bill_date":"2024-03-19",
+                "due_date":"2024-03-19",
+                "category_id":"4 \\ come from category id",
+                "order_number":"12457852584",
+                "items":[
+                    {
+                        "id":"1 \\ items id",
+                        "product_type":"product",
+                        "item":"2 \\ id of product and service",
+                        "quantity":"1",
+                        "price":120,
+                        "discount":"0",
+                        "tax":"[1,2] \\ tax of product and service",
+                        "chart_account_id":"13 \\ come from chart of account",
+                        "description":"write description"
+                    }
+                ]
+            }
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Bill successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Bill Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "bill-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/bill/delete/:bill_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Bill successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Bill Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "debit-note-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/debit-note",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "bill_number": "#BILL00001",
+                    "vendor": "vendor",
+                    "date": "15-02-2024",
+                    "amount": "$120",
+                    "description": "description",
+                    "status": "Partially Used"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "debit-note-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/debit-note/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "bill" : "6 \\ come from bill id",
+            "amount":10,
+            "date":"2023-05-12",
+            "status":"Pending \\ must be in Pending,Partially Used,Fully Used",
+            "description":"Write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Debit Note successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "debit-note-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/debit-note/update/:debit_note_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "bill" : "6 \\ come from bill id",
+            "amount":10,
+            "date":"2023-05-12",
+            "status":"Pending \\ must be in Pending,Partially Used,Fully Used",
+            "description":"Write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Debit Note successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Customer Debit Note Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "debit-note-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/debit-note/delete/:debit_note_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Debit Note successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Customer Debit Note Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    }
+}

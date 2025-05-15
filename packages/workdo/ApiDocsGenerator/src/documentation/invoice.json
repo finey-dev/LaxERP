@@ -1,0 +1,225 @@
+{
+  "invoices-list": {
+    "method": "GET",
+    "endpoints": "/api/:workspace_slug/invoices",
+    "header": {
+      "Accept": "application/json",
+      "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+    },
+    "request": {},
+    "success_response": {
+      "status": "success",
+      "data": [
+        {
+          "id": 1,
+          "issue_date": "2023-09-18",
+          "due_date": "2023-09-22",
+          "send_date": null,
+          "status": "Draft",
+          "invoice_module": "account",
+          "invoice_number": "#INVO00001"
+        }
+      ]
+    },
+    "error_response": {
+      "status": "error",
+      "message": "Token is absent"
+    },
+    "status_code": {
+      "success": "HTTP/1.1 200 OK",
+      "error": "HTTP/1.1 401 Unauthorized"
+    }
+  },
+  "product-invoices-detail": {
+    "method": "GET",
+    "endpoints": "/api/:workspace_slug/invoice/show/:id",
+    "header": {
+      "Accept": "application/json",
+      "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+    },
+    "request": {},
+    "success_response": {
+      "status": "success",
+      "data": {
+        "invoice": {
+          "issue_date": "2023-09-18",
+          "due_date": "2023-09-18",
+          "send_date": "2023-10-02",
+          "status": "Partialy Paid",
+          "invoice_module": "account",
+          "invoice_number": "#INVO00002"
+        },
+        "customer": {
+          "id": 1,
+          "name": "john",
+          "email": "john@gmail.com",
+          "contact": "8989788789",
+          "tax_number": "7898945",
+          "billing_name": "132, my street",
+          "billing_country": "bharat",
+          "billing_state": "gujarat",
+          "billing_city": "surat",
+          "billing_phone": "7898945656",
+          "billing_zip": "395010",
+          "billing_address": "punagam ,surat.",
+          "shipping_name": "132, my street",
+          "shipping_country": "bharat",
+          "shipping_state": "gujarat",
+          "shipping_city": "surat",
+          "shipping_phone": "7898945656",
+          "shipping_zip": "395010",
+          "shipping_address": "punagam ,surat.",
+          "lang": "en",
+          "balance": "$2,620.0",
+          "electronic_address": "RFC 3271",
+          "electronic_address_scheme": "RFC 3271121212"
+        },
+        "items": [
+          {
+            "product_name": "product",
+            "price": "$1,500.0",
+            "tax": "$0.0",
+            "quantity": 1,
+            "discount": "$0.0",
+            "description": "Description"
+          }
+        ],
+        "invoicePayments": [
+          {
+            "date": "2023-10-02",
+            "amount": "$1,000.0",
+            "payment_type": "Manually",
+            "reference": "--",
+            "description": "Description",
+            "account": "cash"
+          },
+          {
+            "date": "2023-10-02",
+            "amount": "$10.0",
+            "payment_type": "Bank Transfer",
+            "reference": "--",
+            "description": "Description",
+            "account": "--"
+          }
+        ],
+        "customFields": [
+          {
+            "name": "Field name",
+            "field": "Field"
+          }
+        ],
+        "bank_transfer_payments": [],
+        "sub_total": "$1,500.0",
+        "discount": "$0.0",
+        "total": "$1,500.0",
+        "paid": "$1,010.0",
+        "credit_note": "$120.0",
+        "due": "$370.0"
+      }
+    },
+    "error_response": {
+      "status": "error",
+      "message": "No Data Found!"
+    },
+    "status_code": {
+      "success": "HTTP/1.1 200 OK",
+      "error": "HTTP/1.1 404 Not Found"
+    }
+  },
+  "project-invoices-detail": {
+    "method": "GET",
+    "endpoints": "/api/:workspace_slug/invoice/show/:id",
+    "header": {
+      "Accept": "application/json",
+      "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+    },
+    "request": {},
+    "success_response": {
+      "status": "success",
+      "data": {
+        "invoice": {
+          "issue_date": "2023-09-18",
+          "due_date": "2023-09-18",
+          "send_date": "2023-10-02",
+          "status": "Partialy Paid",
+          "invoice_module": "taskly",
+          "invoice_number": "#INVO00002"
+        },
+        "customer": {
+          "id": 1,
+          "name": "john",
+          "email": "john@gmail.com",
+          "contact": "8989788789",
+          "tax_number": "7898945",
+          "billing_name": "132, my street",
+          "billing_country": "bharat",
+          "billing_state": "gujarat",
+          "billing_city": "surat",
+          "billing_phone": "7898945656",
+          "billing_zip": "395010",
+          "billing_address": "punagam ,surat.",
+          "shipping_name": "132, my street",
+          "shipping_country": "bharat",
+          "shipping_state": "gujarat",
+          "shipping_city": "surat",
+          "shipping_phone": "7898945656",
+          "shipping_zip": "395010",
+          "shipping_address": "punagam ,surat.",
+          "lang": "en",
+          "balance": "$2,620.0",
+          "electronic_address": "RFC 3271",
+          "electronic_address_scheme": "RFC 3271121212"
+        },
+        "items": [
+          {
+            "project_name": "project-name",
+            "price": "$1,500.0",
+            "tax": "$0.0",
+            "quantity": 1,
+            "discount": "$0.0",
+            "description": "Description"
+          }
+        ],
+        "invoicePayments": [
+          {
+            "date": "2023-10-02",
+            "amount": "$1,000.0",
+            "payment_type": "Manually",
+            "reference": "--",
+            "description": "Description",
+            "account": "cash"
+          },
+          {
+            "date": "2023-10-02",
+            "amount": "$10.0",
+            "payment_type": "Bank Transfer",
+            "reference": "--",
+            "description": "Description",
+            "account": "--"
+          }
+        ],
+        "customFields": [
+          {
+            "name": "Field name",
+            "field": "Field"
+          }
+        ],
+        "bank_transfer_payments": [],
+        "sub_total": "$1,500.0",
+        "discount": "$0.0",
+        "total": "$1,500.0",
+        "paid": "$1,010.0",
+        "credit_note": "$120.0",
+        "due": "$370.0"
+      }
+    },
+    "error_response": {
+      "status": "error",
+      "message": "No Data Found!"
+    },
+    "status_code": {
+      "success": "HTTP/1.1 200 OK",
+      "error": "HTTP/1.1 404 Not Found"
+    }
+  }
+}

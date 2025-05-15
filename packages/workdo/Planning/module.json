@@ -1,0 +1,10 @@
+{
+    "name": "Planning",
+    "alias": "Planning",
+    "description": "",
+    "priority": 1108,
+    "version": 1.4,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "planning"
+}

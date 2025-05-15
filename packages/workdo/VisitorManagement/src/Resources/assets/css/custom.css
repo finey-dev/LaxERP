@@ -1,0 +1,121 @@
+.timeline {
+    z-index: 1;
+    position: relative;
+    list-style-type: none;
+}
+
+.my-custom-timeline .tl-container.right {
+    left: 50%;
+}
+
+.my-custom-timeline .tl-container {
+    max-width: 50%;
+    width: 100%;
+    position: relative;
+    padding: 0px 25px;
+}
+
+.my-custom-timeline .support-time {
+    position: relative;
+}
+
+.my-custom-timeline .left .support-time::before {
+    right: -22px;
+    left: auto;
+}
+
+.my-custom-timeline .timeline:before {
+    background: #DBDBDB;
+    z-index: 1;
+    top: 11px;
+    position: absolute;
+    left: 50%;
+    content: ' ';
+    display: block;
+    width: 6px;
+    height: 100%;
+    margin-left: -3px;
+}
+
+.my-custom-timeline .left .support-time::after {
+    right: -30px;
+    left: auto;
+}
+
+.my-custom-timeline .support-time::before {
+    content: " ";
+    height: 5px;
+    position: absolute;
+    top: 30px;
+    width: 23px;
+    z-index: 1;
+    left: -22px;
+    background: #DBDBDB;
+}
+
+.my-custom-timeline .support-time::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: -30px;
+    background-color: white;
+    border: 3px solid #DBDBDB;
+    top: 27px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.my-custom-timeline .tl-box {
+    padding: 15px;
+    box-shadow: 0px 0px 26.830137252807617px 0px #0000000D;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    margin-top: 10px;
+    background: #ffffff;
+}
+
+.my-custom-timeline .tl-btn.licence-btn {
+    background-color: #E0FFF5;
+    border-color: #01CE8A;
+}
+
+.my-custom-timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+.my-custom-timeline ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.my-custom-timeline .tl-box .time-wrapper {
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.my-custom-timeline .tl-box .time-wrapper .time {
+    font-size: 11px;
+    color: #505050;
+    line-height: 1;
+}
+
+.time {
+    display: inline-block;
+    padding: 4px 6px;
+    background: rgb(248, 248, 248);
+}
+
+.my-custom-timeline .tl-container.left {
+    left: 0;
+    text-align: end;
+}
+
+.my-custom-timeline .left .tl-box .time-wrapper {
+    justify-content: flex-start;
+}

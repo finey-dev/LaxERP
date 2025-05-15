@@ -1,0 +1,25 @@
+{
+    "name": "workdo/reminder",
+    "description": "Description for reminder package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\Reminder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\Reminder\\Providers\\ReminderServiceProvider"
+            ]
+        }
+    }
+}

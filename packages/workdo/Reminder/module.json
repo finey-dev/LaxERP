@@ -1,0 +1,10 @@
+{
+    "name": "Reminder",
+    "alias": "Reminder",
+    "description": "",
+    "priority": 185,
+    "version": 1.5,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "reminder"
+}

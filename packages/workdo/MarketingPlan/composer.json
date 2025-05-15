@@ -1,0 +1,25 @@
+{
+    "name": "workdo/marketing-plan",
+    "description": "Description for marketing-plan package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\MarketingPlan\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\MarketingPlan\\Providers\\MarketingPlanServiceProvider"
+            ]
+        }
+    }
+}

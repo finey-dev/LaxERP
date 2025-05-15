@@ -1,0 +1,162 @@
+{
+    "workspace":{
+        "method"        : "GET",
+        "endpoints"           : "/api/workspaces",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "data": {
+                "active_workspace": {
+                    "id": 1,
+                    "name": "my-company",
+                    "slug": "my-company"
+                },
+                "workspaces": [
+                    {
+                        "id": 1,
+                        "name": "my-company",
+                        "slug": "my-company"
+                    }
+                ]
+            }
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "add-new-workspace":{
+        "method"        : "POST",
+        "endpoints"           : "/api/workspace/store",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name":"workspace-name"
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Workspace create successfully!",
+            "data": {
+              "id": 1,
+              "name": "workspace-name",
+              "slug": "workspace-name"
+            }
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "request-workspace":{
+        "method"        : "GET",
+        "endpoints"           : "/api/workspace/show/:id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "data": {
+              "id": 1,
+              "name": "workspace-name",
+              "slug": "workspace-name"
+            }
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "No data available"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "update-workspace":{
+        "method"        : "PUT",
+        "endpoints"           : "/api/workspace/update/:id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name":"workspace-name"
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Workspace updated successfully!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "No data available"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "delete-workspace":{
+        "method"        : "DELETE",
+        "endpoints"           : "/api/workspace/delete/:id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "Workspace Deleted Successfully!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "You can't delete Workspace!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    },
+    "change-workspace":{
+        "method"        : "GET",
+        "endpoints"           : "/api/workspace/change/:id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+
+        },
+        "success_response"      : {
+            "status": "success",
+            "message": "User Workspace change successfully."
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Workspace not found."
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 404 Not Found"
+        }
+    }
+}

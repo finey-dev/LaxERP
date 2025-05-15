@@ -1,0 +1,31 @@
+<?php
+
+namespace Workdo\Procurement\Events;
+
+use Illuminate\Queue\SerializesModels;
+
+class DestroyBudgetType
+{
+    use SerializesModels;
+
+    /**
+     * Create a new event instance.
+     *
+     * @return void
+     */
+       public $rfx;
+
+    public function __construct($budgettype)
+    {
+        $this->rfx = $budgettype;
+    }
+    /**
+     * Get the channels the event should be broadcast on.
+     *
+     * @return array
+     */
+    public function broadcastOn()
+    {
+        return [];
+    }
+}

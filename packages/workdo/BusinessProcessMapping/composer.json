@@ -1,0 +1,26 @@
+{
+    "name": "workdo/business-process-mapping",
+    "description": "Description for business-process-mapping package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\BusinessProcessMapping\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\BusinessProcessMapping\\Providers\\BusinessProcessMappingServiceProvider",
+                "Workdo\\BusinessProcessMapping\\Providers\\ViewComposer"
+            ]
+        }
+    }
+}

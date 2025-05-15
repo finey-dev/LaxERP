@@ -1,0 +1,10 @@
+{
+    "name": "ApiDocsGenerator",
+    "alias": "Api Docs Generator",
+    "description": "",
+    "priority": 690,
+    "version": 3.9,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "api-docs-generator"
+}

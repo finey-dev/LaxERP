@@ -1,0 +1,98 @@
+
+/***************/
+.business-view-card label {
+    width: 100%;
+}
+ .business-view-card input[type="radio"] {
+    display: none;
+    padding: 0;
+    border: 0;
+}
+.business-view-card.selected-theme .business-view-inner {
+    border: 1px solid #0db02bbd;
+}
+.business-view-inner .buisness-img {
+    position: relative;
+    padding-top: 53%;
+    display: block;
+}
+.business-view-inner .buisness-img img {
+    object-fit: scale-down;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.business-view-card .business-color-input {
+    gap: 5px;
+}
+
+.colorinput .border-box {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+}
+.colorinput .colorinput-input:checked+ .border-box .colorinput-color {
+    outline: 1px solid black;
+    outline-offset: 2px;
+}
+.business-view-inner {
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 15px;
+    border: 1px solid #DAE8F9;
+}
+.colorinput-color{
+    border-radius: 100%;
+}
+
+.business-view-card .business-view-inner::after {
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #0db02bbd;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #0db02bbd;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+.business-view-card.selected-theme .business-view-inner::after {
+    content: "✓";
+    transform: scale(1);
+    z-index: 2;
+}
+.business-view-card .business-color-input label {
+    width: auto;
+}
+@media screen and (max-width:991px) {
+    .modal-body-card{
+        height: 300px;
+        overflow-y: scroll;
+        padding: 8px 0;
+    }
+}
+

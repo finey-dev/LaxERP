@@ -1,0 +1,764 @@
+{
+    "leads-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/leads",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "pipeline": {
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "lead_stages": [
+                    {
+                        "id": 1,
+                        "name": "Draft",
+                        "order": 0,
+                        "leads": [
+                            {
+                                "id": 1,
+                                "name": "Lead-name",
+                                "email": "lead@example.com",
+                                "subject": "lead-subject",
+                                "phone": "1234576842",
+                                "products_count": 10,
+                                "sources_count": 20,
+                                "users": [
+                                    {
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Sent",
+                        "order": 0,
+                        "leads": [
+                            {
+                                "id": 2,
+                                "name": "Lead-name",
+                                "email": "lead@example.com",
+                                "subject": "lead-subject",
+                                "phone": "1234576842",
+                                "products_count": 5,
+                                "sources_count": 2,
+                                "users": [
+                                    {
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "Open",
+                        "order": 0,
+                        "leads": [
+                            {
+                                "id": 3,
+                                "name": "Lead-name",
+                                "email": "lead@example.com",
+                                "subject": "lead-subject",
+                                "phone": "1234576842",
+                                "products_count": 5,
+                                "sources_count": 2,
+                                "users": [
+                                    {
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "name": "Revised",
+                        "order": 0,
+                        "leads": [
+                            {
+                                "id": 4,
+                                "name": "Lead-name",
+                                "email": "lead@example.com",
+                                "subject": "lead-subject",
+                                "phone": "1234576842",
+                                "products_count": 5,
+                                "sources_count": 2,
+                                "users": [
+                                    {
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "name": "Declined",
+                        "order": 0,
+                        "leads": [
+                            {
+                                "id": 5,
+                                "name": "Lead-name",
+                                "email": "lead@example.com",
+                                "subject": "lead-subject",
+                                "phone": "1234576842",
+                                "products_count": 5,
+                                "sources_count": 2,
+                                "users": [
+                                    {
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "name": "Accepted",
+                        "order": 0,
+                        "leads": [
+                            {
+                                "id": 6,
+                                "name": "Lead-name",
+                                "email": "lead@example.com",
+                                "subject": "lead-subject",
+                                "phone": "1234576842",
+                                "products_count": 5,
+                                "sources_count": 2,
+                                "users": [
+                                    {
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "lead-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "subject": "subject name",
+            "name": "lead name",
+            "email": "leademail@gmail.com",
+            "phone": "9898989898",
+            "follow_up_date": "2024-04-15",
+            "user_id": "21 \\ id of user"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/lead/show/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "lead": {
+                    "id": 1,
+                    "name": "Lead-name",
+                    "email": "lead@example.com",
+                    "subject": "lead-subject",
+                    "order": 0,
+                    "phone": "9898454556",
+                    "is_active": 1,
+                    "date": "2023-10-04",
+                    "products": [
+                        {
+                            "id": 1,
+                            "name": "product-name",
+                            "image": "https://example.com/Modules/ProductService/Resources/assets/image/img01.jpg"
+                        }
+                    ],
+                    "sources": [
+                        {
+                            "id": 1,
+                            "name": "source-name"
+                        }
+                    ],
+                    "tasks": [
+                        {
+                            "id": 1,
+                            "name": "task 1",
+                            "date": "2024-04-22",
+                            "time": "14:36:00",
+                            "priority": "Low",
+                            "status": "On Going"
+                        }
+                    ],
+                    "calls": [
+                        {
+                            "id": 1,
+                            "subject": "Call subject",
+                            "call_type": "outbound",
+                            "duration": "00:30:42",
+                            "lead_call_user": "User-name"
+                        }
+                    ],
+                    "emails": [
+                        {
+                            "id": 1,
+                            "subject": "Email-subject",
+                            "to": "email@example.com",
+                            "diff_time": "5 days ago"
+                        }
+                    ],
+                    "pipeline": "Sales",
+                    "stage": "Draft",
+                    "users": [
+                        {
+                            "id": 1,
+                            "name": "User-name",
+                            "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                        }
+                    ],
+                    "discussion": [
+                        {
+                            "id": 1,
+                            "comment": "User-coment",
+                            "user_name": "User-name",
+                            "user_type": "client",
+                            "user_avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                        }
+                    ],
+                    "files": [
+                        {
+                            "id": 1,
+                            "file_path": "https://example.com/uploads/leads/filename.png"
+                        }
+                    ]
+                },
+                "precentage": "17"
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/lead/update/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name": "lead name",
+            "email": "leadname@gmail.com",
+            "subject": "subject name",
+            "user_id": "21 \\ id of user",
+            "pipeline_id": "1 \\ id of pipeline",
+            "stage_id": "1 \\ id of stage",
+            "sources": "[2] \\ ids of sources",
+            "products": "[2] \\ ids of products",
+            "notes": "write notes",
+            "phone": 9898989898,
+            "follow_up_date": "2024-04-24"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead/delete/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-task-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-task/store/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name": "task 2",
+            "date": "2024-04-29",
+            "time": "16:21",
+            "priority": "Low \\ must be in : Low,Medium,High",
+            "status": "On Going \\ must be in : On Going,Completed"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Task successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-task-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/lead-task/:lead_id/update/:lead_task_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name": "task 2",
+            "date": "2024-04-29",
+            "time": "16:21",
+            "priority": "Low \\ must be in : Low,Medium,High",
+            "status": "On Going \\ must be in : On Going,Completed"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Task successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Task Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-task-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead-task/:lead_id/delete/:lead_task_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead Task successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Task Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-user-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-user/store/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "users": "[5,22] \\ id from users table"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead User successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-user-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead-user/:lead_id/delete/:lead_user_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead User Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead User Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "request-data-for-create-lead-product": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/lead-product/create/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "1": "product name",
+                "2": "product name"
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-product-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-product/store/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "products": "[1,2] \\ id of request-data-for-create-lead-product"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Products successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-product-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead-product/:lead_id/delete/:lead_product_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead Products Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-source-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-source/create/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "sources": "[2] \\ ids of sources"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Sources successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-source-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead-source/:lead_id/delete/:lead_source_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead Sources Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-email-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-email/create/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "to":"asdg@gmail.com",
+            "subject":"hii subject",
+            "description" : "<p>hii description</p>"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Email Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-discussion-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-discussion/create/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "comment":"write comment"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Discussion Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-note-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-note/create/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "notes":"write notes here"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Note successfully saved!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-file-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-file/create/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "file":"upload file"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead File Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-file-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead-file/:lead_id/delete/:lead_file_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead File Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-call-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead-call/create/:lead_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "subject":"subject name",
+            "call_type":"outbound \\ must be in outbound,inbound",
+            "duration":"09:55:44",
+            "user_id":"21 \\ id of user",
+            "description":"Write description",
+            "call_result":"Write result you get"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Call successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-call-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/lead-call/:lead_id/update/:lead_call_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "subject":"subject name",
+            "call_type":"outbound \\ must be in outbound,inbound",
+            "duration":"09:55:44",
+            "user_id":"21 \\ id of user",
+            "description":"Write description",
+            "call_result":"Write result you get"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Call Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Call Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "lead-call-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead-call/:lead_id/delete/:lead_call_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead Call Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Call Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    }
+}

@@ -1,0 +1,573 @@
+/* Star Rating */
+
+.rating-stars ul {
+    list-style-type: none;
+
+}
+
+.rating-stars ul>li.star {
+    display: inline-block;
+}
+
+.rating-stars ul>li.star.selected>i.fa {
+    color: #FF912C;
+}
+
+.rating-stars ul>li.star>i.fa {
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+.rating-stars ul>li.star.hover>i.fa {
+    color: #FFCC36;
+}
+
+.rating-stars ul>li.star.selected>i.fa {
+    color: #FF912C;
+}
+
+
+/* coundown */
+.countdownHolder {
+
+    width: 384px;
+    margin: 0 auto;
+    font: 25px/1.5 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    letter-spacing: -20px;
+}
+
+.position {
+    display: inline-block;
+    height: 1.6em;
+    overflow: hidden;
+    position: relative;
+    width: 1.5em;
+}
+
+.digit {
+    position: absolute;
+    display: block;
+    width: 1em;
+    background-color: #444;
+    border-radius: 0.2em;
+    text-align: center;
+    color: #fff;
+    letter-spacing: -1px;
+    font-size: 20px;
+}
+
+.digit.static {
+    box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.35);
+
+    background-image: linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -o-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -moz-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -webkit-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -ms-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.5, #3A3A3A),
+            color-stop(0.5, #444444));
+}
+
+
+/**
+ * You can use these classes to hide parts
+ * of the countdown that you don't need.
+ */
+
+.countDays {
+    /* display:none !important;*/
+}
+
+.countDiv0 {
+    /* display:none !important;*/
+}
+
+.countHours {}
+
+.countDiv1 {}
+
+.countMinutes {}
+
+.countDiv2 {}
+
+.countSeconds {}
+
+
+.countDiv {
+    display: inline-block;
+    width: 16px;
+    height: 1.6em;
+    position: relative;
+}
+
+.countDiv:before,
+.countDiv:after {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #444;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -3px;
+    top: 0.5em;
+    box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.5);
+    content: '';
+}
+
+.countDiv:after {
+    top: 0.9em;
+}
+
+/*-------------------------
+	Simple reset
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+
+
+/*
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+} */
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*----------------------------
+	Main Section
+-----------------------------*/
+
+#note {
+    color: #666666;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 4px;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    width: 400px;
+}
+
+
+
+
+
+
+/*--------------memeber-card-design----------*/
+.member-view-box {
+    padding: 0px 20px;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.member-image {
+    width: 60px;
+    position: relative;
+}
+
+.member-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: #000;
+    z-index: 1;
+}
+
+.time-line-wrapper .card .card-header {
+    position: relative;
+}
+
+.time-line-wrapper .countDiv {
+    display: flex;
+    width: 100%;
+    height: 1.6em;
+    position: relative;
+}
+
+.time-line-wrapper .countdownHolder {
+    width: 100%;
+    margin: 0 auto !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.time-line-wrapper .countDays,
+.time-line-wrapper .countHours,
+.time-line-wrapper .countMinutes,
+.time-line-wrapper .countSeconds {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.time-line-wrapper .position {
+    display: flex;
+    height: 30px;
+    overflow: hidden;
+    width: 20px;
+    position: relative;
+}
+
+.time-line-wrapper .countDiv0,
+.time-line-wrapper .countDiv1,
+.time-line-wrapper .countDiv2 {
+    width: 16px;
+}
+
+.time-line-wrapper .count-main-div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 18px;
+    justify-content: center;
+    margin: 15px auto 0;
+}
+
+.time-line-wrapper .count-main-div .countdownHolder {
+    justify-content: center;
+}
+
+.time-line-wrapper .card-body {
+    padding: 15px;
+}
+
+/* .time-line-wrapper .digit{
+    background-color: #ecf0f1;
+color: #afc5cc!important;
+}
+.time-line-wrapper .digit.static{
+background-color: #ecf0f1 !important;
+background-image:none !important;
+} */
+.card-counter-div {
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .time-line-wrapper .col-md-6.col-xl-3.All {
+        flex: 0 0 auto;
+        width: 33.33%;
+    }
+
+    .time-line-wrapper .card .card-header {
+        padding: 20px 15px 0;
+    }
+
+    .digit {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .time-line-wrapper .col-md-6.col-xl-3.All {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .time-line-wrapper .col-md-6.col-xl-3.All {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+
+
+/******* flowchart css *********/
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    padding-right: 32px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.tree li {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li::before,
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #ccc;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #ccc;
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li:last-child::before {
+    border-right: 2px solid #ccc;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.tree li a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff !important;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    margin: 0 15px;
+    width: max-content;
+}
+
+.theme-1 .tree li a {
+    background: var(--theme1-color);
+}
+
+.theme-2 .tree li a {
+    background: var(--theme2-color);
+}
+
+.theme-3 .tree li a {
+    background: var(--theme3-color);
+}
+
+.theme-4 .tree li a {
+    background: var(--theme4-color);
+}
+
+.theme-5 .tree li a {
+    background: var(--theme5-color);
+}
+
+.theme-6 .tree li a {
+    background: var(--theme6-color);
+}
+
+.theme-7 .tree li a {
+    background: var(--theme7-color);
+}
+
+.theme-8 .tree li a {
+    background: var(--theme8-color);
+}
+
+.theme-9 .tree li a {
+    background: var(--theme9-color);
+}
+
+.theme-10 .tree li a {
+    background: var(--theme10-color);
+}
+
+.tree li a:hover,
+.tree li a:hover+ul li a {
+    background: #c8e4f8;
+    color: #000 !important;
+}
+
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before {
+    border-color: #94a0b4;
+}
+
+div.tree {
+    overflow: scroll;
+}
+
+.responsive-tree {
+    overflow: scroll;
+}
+
+div.tree::-webkit-scrollbar,
+.responsive-tree::-webkit-scrollbar {
+    width: 0;
+}
+
+.choices__list--dropdown {
+    visibility: hidden;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    top: 100%;
+    margin-top: -1px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+    word-break: break-all;
+    will-change: visibility;
+}
+
+.text-single-line {
+    line-height: 1.2em;
+    height: 2.2em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.property {
+    border-top: 1px solid #d1d1d19f;
+}
+
+.text-single-line {
+    height: auto;
+}
+
+
+
+.card-address {
+    padding-top: 12px !important;
+}
+
+
+
+.card-image {
+    flex: 1;
+}
+
+.time-line-wrapper .count-main-div {
+    margin-bottom: 15px;
+    height: auto;
+}
+
+.time-line-wrapper .countDiv,
+.countDiv {
+    height: auto;
+}
+
+.countDiv:before,
+.countDiv:after {
+    top: 7px;
+    left: 62%;
+}
+
+.countDiv:before {
+    top: -5px;
+    left: 62%;
+}
+
+.time-line-wrapper .position span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-btn-wrp button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+}
+
+.dropdown-btn-wrp button.show {
+    border: 0;
+}
+
+.dropdown-btn-wrp {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* treeview scrollbar css */
+html {
+    scroll-behavior: smooth;
+}
+
+div.tree::-webkit-scrollbar,
+.responsive-tree::-webkit-scrollbar {
+    width: 100%;
+    height: 7px;
+}
+
+div.tree::-webkit-scrollbar-thumb,
+.responsive-tree::-webkit-scrollbar-thumb {
+    background-color: rgb(165, 165, 165);
+    border-radius: 7px;
+}
+
+.div.tree::-webkit-scrollbar-track,
+.responsive-tree::-webkit-scrollbar-track {
+    background: rgb(202, 201, 201);
+    border-radius: 7px;
+}

@@ -1,0 +1,203 @@
+{
+    "deals-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/deals",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "pipeline": {
+                    "id": 1,
+                    "name": "Sales",
+                    "stages": [
+                        {
+                            "id": 1,
+                            "name": "Initial Contact",
+                            "order": 0,
+                            "deals": [
+                                {
+                                    "id": 1,
+                                    "name": "deal-name",
+                                    "price": "$100.0",
+                                    "sources": 0,
+                                    "products": 1,
+                                    "status": "Active",
+                                    "order": 0,
+                                    "phone": "7889897878",
+                                    "tasks": "1/0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Qualification",
+                            "order": 0,
+                            "deals": [
+                                {
+                                    "id": 2,
+                                    "name": "deal-name",
+                                    "price": "$100.0",
+                                    "sources": 0,
+                                    "products": 1,
+                                    "status": "Active",
+                                    "order": 0,
+                                    "phone": "7889897878",
+                                    "tasks": "1/0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Meeting",
+                            "order": 0,
+                            "deals": [
+                                {
+                                    "id": 3,
+                                    "name": "deal-name",
+                                    "price": "$100.0",
+                                    "sources": 0,
+                                    "products": 1,
+                                    "status": "Active",
+                                    "order": 0,
+                                    "phone": "7889897878",
+                                    "tasks": "1/0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "name": "Proposal",
+                            "order": 0,
+                            "deals": [
+                                {
+                                    "id": 4,
+                                    "name": "deal-name",
+                                    "price": "$100.0",
+                                    "sources": 0,
+                                    "products": 1,
+                                    "status": "Active",
+                                    "order": 0,
+                                    "phone": "7889897878",
+                                    "tasks": "1/0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "name": "Close",
+                            "order": 0,
+                            "deals": [
+                                {
+                                    "id": 5,
+                                    "name": "deal-name",
+                                    "price": "$100.0",
+                                    "sources": 0,
+                                    "products": 1,
+                                    "status": "Active",
+                                    "order": 0,
+                                    "phone": "7889897878",
+                                    "tasks": "1/0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "deal-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/deal/show/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": {
+                "deal": {
+                    "id": 1,
+                    "name": "deal-name",
+                    "price": "$100.0",
+                    "status": "Active",
+                    "order": 0,
+                    "phone": "7889897878",
+                    "is_active": 1,
+                    "pipeline": "Sales",
+                    "stage": "Initial Contact",
+                    "tasks": [
+                        {
+                            "name": "deal-task",
+                            "date": "2023-10-05",
+                            "time": "09:54:00",
+                            "priority": "Low",
+                            "status": "On Going"
+                        }
+                    ],
+                    "products": [
+                        {
+                            "name": "product-name",
+                            "sku": "product-sku",
+                            "sale_price": "$1,500.0",
+                            "purchase_price": "$1,000.0"
+                        }
+                    ],
+                    "sources": [
+                        {
+                            "name":"source-name"
+                        }
+                    ],
+                    "calls": [
+                        {
+                            "subject": "Call subject",
+                            "call_type": "outbound",
+                            "duration": "00:30:42",
+                            "lead_call_user": "User-name"
+                        }
+                    ],
+                    "emails": [
+                        {
+                            "subject": "Email-subject",
+                            "to": "email@example.com",
+                            "diff_time": "5 days ago"
+                        }
+                    ],
+                    "discussion": [
+                        {
+                            "comment"     : "User-coment",
+                            "user_name"   : "User-name",
+                            "user_type"   : "client",
+                            "user_avatar" : "https://example.com/uploads/users-avatar/avatar.png"
+                        }
+                    ],
+                    "files": [
+                        {
+                            "file_path": "https://example.com/uploads/deals/filename.png"
+                        }
+                    ]
+                }
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Deal Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    }
+}

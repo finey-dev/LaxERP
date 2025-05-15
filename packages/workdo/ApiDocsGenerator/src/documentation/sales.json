@@ -1,0 +1,1542 @@
+{
+    "sales-account-type-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/account/type",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "banking"
+                },
+                {
+                    "id": 2,
+                    "name": "selling account"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-account-type-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/account/type/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"Sales Account Name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Type Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-account-type-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/account/type/update/:sales_account_type_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"Sales Account Name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Type successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Type Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-account-type-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/account/type/delete/:sales_account_type_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Type successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Type Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-industry-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/account/industry",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "textile"
+                },
+                {
+                    "id": 2,
+                    "name": "diamond"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-industry-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/account/industry/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales account industry name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Industry successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-industry-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/account/industry/update/:sales_industry_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales account industry name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Industry successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Industry Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-industry-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/account/industry/delete/:sales_industry_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Industry successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Industry Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-stage-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/opportunity/stage",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "opportunities stage 1"
+                },
+                {
+                    "id": 2,
+                    "name": "opportunities stage 1"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-stage-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/opportunity/stage/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+           "name":"opportunities stage 1"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Opportunities Stage successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-stage-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/opportunity/stage/update/:sales_opportunity_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+           "name":"opportunities stage 1"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Opportunities Stage successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Opportunities Stage Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-stage-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/opportunity/stage/delete/:sales_opportunity_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Opportunities Stage successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Opportunities Stage Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-case-type-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/case-type",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "case type"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-case-type-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/case-type/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "case type"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Case Type successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-case-type-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/case-type/update/:case_type_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "case type"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Case Type successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Case Type Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-case-type-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/case-type/delete/:case_type_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Case Type successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Case Type Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-shipping-provider-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/shipping/provider",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "shipping provider name",
+                    "website":"https://example.com"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-shipping-provider-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/shipping/provider/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"shipping provider name",
+            "website":"https://example.com"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Shipping Provider successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-shipping-provider-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/shipping/provider/update/:shipping_provider_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"shipping provider name",
+            "website":"https://example.com"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Shipping Provider Successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Shipping Provider Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-shipping-provider-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/shipping/provider/delete/:shipping_provider_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Shipping Provider Successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Shipping Provider Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-type-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/document-type",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "document type name"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-type-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/document-type/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name": "document type name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Type successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-type-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/document-type/update/:document_type_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name": "document type name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Type successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Document Type Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-type-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/document-type/delete/:document_type_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Document Type Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-folder-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/document/folder",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "customer",
+                    "parent": "-",
+                    "description": "descripion"
+                },
+                {
+                    "id": 2,
+                    "name": "Kenneth",
+                    "parent": "customer",
+                    "description": "descripion"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-folder-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/document/folder/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"folder name",
+            "parent":"1 \\ id of document folder",
+            "description":"write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Folders successfully created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-folder-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/document/folder/update/:document_folder_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"folder name",
+            "parent":"1 \\ id of document folder",
+            "description":"write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Folders successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Document Folder Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-document-folder-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/document/folder/delete/:document_folder_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Folders successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Document Folder Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-accounts-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales-accounts",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "sales account",
+                    "email": "sales@gmail.com",
+                    "phone": "9898989898",
+                    "website": "rajodiya.com",
+                    "billing_address": "abc",
+                    "billing_city": "surat",
+                    "billing_state": "gujarat",
+                    "billing_country": "india",
+                    "billing_postalcode": 395010,
+                    "shipping_address": "xyz",
+                    "shipping_city": "surat",
+                    "shipping_state": "gujarat",
+                    "shipping_country": "india",
+                    "shipping_postalcode": 395210,
+                    "description": "write description",
+                    "assign_user_name": "sushant",
+                    "assign_user_email": "sushant@gmail.com",
+                    "industry": "textile",
+                    "type": "banking",
+                    "document": ""
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-accounts-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales-account/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales name",
+            "email":"sales.email@gmail.com",
+            "phone":"9898989898",
+            "website":"demo.rajodiya.com",
+            "billing_address":"Eu fugiat eveniet",
+            "shipping_address":"Eu fugiat eveniet",
+            "billing_city":"surat",
+            "billing_state":"gujrat",
+            "shipping_city":"surat",
+            "shipping_state":"gujrat",
+            "billing_country":"india",
+            "billing_postalcode":"395010",
+            "shipping_country":"india",
+            "shipping_postalcode":"395010",
+            "type":"2",
+            "industry":"1",
+            "document_id":"0",
+            "user":"24",
+            "description":"write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-accounts-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales-account/update/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales name",
+            "email":"sales.email@gmail.com",
+            "phone":"9898989898",
+            "website":"demo.rajodiya.com",
+            "billing_address":"Eu fugiat eveniet",
+            "shipping_address":"Eu fugiat eveniet",
+            "billing_city":"surat",
+            "billing_state":"gujrat",
+            "shipping_city":"surat",
+            "shipping_state":"gujrat",
+            "billing_country":"india",
+            "billing_postalcode":"395010",
+            "shipping_country":"india",
+            "shipping_postalcode":"395010",
+            "type":"2",
+            "industry":"1",
+            "document_id":"0",
+            "user":"24",
+            "description":"write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-accounts-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales-account/delete/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Sales Account Successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-contact-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales-contacts",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "customer",
+                    "email": "customer@example.com",
+                    "phone": "9898989898",
+                    "contact_address": "12",
+                    "contact_city": "surat",
+                    "contact_state": "gujarat",
+                    "contact_country": "india",
+                    "contact_postalcode": 395010,
+                    "description": "write description",
+                    "account_name": "customer",
+                    "assign_user_name": "sushant",
+                    "assign_user_email": "sushant@gmail.com"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-contact-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales-contact/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales contact name",
+            "account":"2 \\ come from Sales Account",
+            "email":"sdfgsdgs@example.com",
+            "phone":"9898989898",
+            "contact_address":"12",
+            "contact_city":"surat",
+            "contact_state":"gujarat",
+            "contact_postalcode":"395010",
+            "contact_country":"india",
+            "user_id":"34 \\ come from users",
+            "description":"Write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Sales Contact Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-contact-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales-contact/update/:contact_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales contact name",
+            "account":"2 \\ come from Sales Account",
+            "email":"sdfgsdgs@example.com",
+            "phone":"9898989898",
+            "contact_address":"12",
+            "contact_city":"surat",
+            "contact_state":"gujarat",
+            "contact_postalcode":"395010",
+            "contact_country":"india",
+            "user_id":"34 \\ come from users",
+            "description":"Write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Sales Contact Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-contact-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales-contact/delete/:contact_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Sales Contact Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/opportunities",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "opportunity",
+                    "account": "sales name",
+                    "stage": "opportunity stage 1",
+                    "amount": "$1,200",
+                    "probability": "1",
+                    "close_date": "25-04-2024",
+                    "contacts": "-",
+                    "lead_source": "-",
+                    "description": "this is test description",
+                    "assign_user": "sushant"
+                },
+                {
+                    "id": 2,
+                    "name": "opportunity",
+                    "account": "sales name",
+                    "stage": "opportunity stage 1",
+                    "amount": "$1,000",
+                    "probability": "2",
+                    "close_date": "12-04-2024",
+                    "contacts": "-",
+                    "lead_source": "-",
+                    "description": "12345678",
+                    "assign_user": "sushant"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/opportunities/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"opportunity",
+            "account":"2 \\ id of sales account",
+            "contact":"2 \\ id of sales contact",
+            "stage":"2 \\ id of opportunity stage",
+            "amount":1200,
+            "probability":"5",
+            "close_date":"2024-04-12",
+            "lead_source":"1 \\ id of lead(optional)",
+            "user":"24 \\ id of user",
+            "description":"write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Sales Opportunities Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/opportunity/update/:opportunity_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"opportunity",
+            "account":"2 \\ id of sales account",
+            "contact":"2 \\ id of sales contact",
+            "stage":"2 \\ id of opportunity stage",
+            "amount":1200,
+            "probability":"5",
+            "close_date":"2024-04-12",
+            "lead_source":"1 \\ id of lead(optional)",
+            "user":"24 \\ id of user",
+            "description":"write description"
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Sales Opportunities Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-opportunity-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/opportunity/delete/:opportunity_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Sales Opportunities Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Account Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-quote-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/quotes",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "quote_id": "#QUO00001",
+                    "name": "testing",
+                    "amount": "$244",
+                    "date_quoted": "04-04-2024",
+                    "user": "sushant",
+                    "quote_number": 12,
+                    "status": "Open",
+                    "account": "sales name",
+                    "opportunity": "opportunity",
+                    "billing_address": "Eu fugiat eveniet",
+                    "billing_city": "surat",
+                    "billing_state": "gujrat",
+                    "billing_country": "india",
+                    "billing_postalcode": 395010,
+                    "shipping_address": "Eu fugiat eveniet",
+                    "shipping_city": "surat",
+                    "shipping_state": "gujrat",
+                    "shipping_country": "india",
+                    "shipping_postalcode": 395010,
+                    "billing_contact": "sales contact name"
+                },
+                {
+                    "id": 2,
+                    "quote_id": "#QUO00002",
+                    "name": "quote 2",
+                    "amount": "$0",
+                    "date_quoted": "05-04-2024",
+                    "user": "employee",
+                    "quote_number": 11,
+                    "status": "Open",
+                    "account": "sales name",
+                    "opportunity": "opportunity",
+                    "billing_address": "Eu fugiat eveniet",
+                    "billing_city": "surat",
+                    "billing_state": "gujrat",
+                    "billing_country": "india",
+                    "billing_postalcode": 395010,
+                    "shipping_address": "Eu fugiat eveniet",
+                    "shipping_city": "surat",
+                    "shipping_state": "gujrat",
+                    "shipping_country": "india",
+                    "shipping_postalcode": 395010,
+                    "billing_contact": "sales contact name"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-quote-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/quotes/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"quote 1",
+            "opportunity":"1 \\ id of sales opportunity",
+            "status":"Open \\ must be in Open,Cancelled",
+            "account":"1 \\ id of sales account",
+            "date_quoted":"2024-05-02",
+            "quote_number":"1",
+            "billing_address":"high family resident",
+            "shipping_address":"high family resident",
+            "billing_city":"surat",
+            "billing_state":"gujrat",
+            "shipping_city":"surat",
+            "shipping_state":"gujrat",
+            "billing_country":"india",
+            "billing_postalcode":"395010",
+            "shipping_country":"395010",
+            "shipping_postalcode":"395010",
+            "billing_contact":"1 \\ id of sales contact",
+            "shipping_contact":"1 \\ id of sales contact",
+            "tax":"[1]",
+            "shipping_provider":"1 \\ id of shipping provider",
+            "description":"write description",
+            "user":"3 \\ id of user"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Quote Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-quote-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/quote/update/:quote_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"quote 1",
+            "opportunity":"1 \\ id of sales opportunity",
+            "status":"Open \\ must be in Open,Cancelled",
+            "account":"1 \\ id of sales account",
+            "date_quoted":"2024-05-02",
+            "quote_number":"1",
+            "billing_address":"high family resident",
+            "shipping_address":"high family resident",
+            "billing_city":"surat",
+            "billing_state":"gujrat",
+            "shipping_city":"surat",
+            "shipping_state":"gujrat",
+            "billing_country":"india",
+            "billing_postalcode":"395010",
+            "shipping_country":"395010",
+            "shipping_postalcode":"395010",
+            "billing_contact":"1 \\ id of sales contact",
+            "shipping_contact":"1 \\ id of sales contact",
+            "tax":"[1]",
+            "shipping_provider":"1 \\ id of shipping provider",
+            "description":"write description",
+            "user":"3 \\ id of user"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Quote Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Quote Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-quote-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/quote/delete/:quote_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Quote Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Quote Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-cases-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/cases",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "user": "sushant",
+                    "name": "case name",
+                    "number": "1",
+                    "status": "New",
+                    "account": "sales name",
+                    "priority": "Normal",
+                    "contact": "sales contact name",
+                    "type": "case1",
+                    "description": "this is test description"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Quote Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-cases-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/cases/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"case type 2",
+            "status":"New \\ must be in New,Assigned,Pending,Closed,Rejected,Duplicate",
+            "account":"2",
+            "priority":"Low \\must be in Low,Normal,High,Urgent",
+            "contact":"2",
+            "type":"1",
+            "user":"34",
+            "description":"description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Common Case Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-cases-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/cases/update/:case_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"case type 2",
+            "status":"New \\ must be in New,Assigned,Pending,Closed,Rejected,Duplicate",
+            "account":"2",
+            "priority":"Low \\must be in Low,Normal,High,Urgent",
+            "contact":"2",
+            "type":"1",
+            "user":"34",
+            "description":"description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Common Cases Successfully updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Common Case Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-cases-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/cases/delete/:case_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Common Case Successfully deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Common Case Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-documents-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sales/documents",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "sales document",
+                    "assign_user_name": "sushant",
+                    "account": "sales name",
+                    "type": "document type",
+                    "opportunities": "opportunity",
+                    "publish_date": "10-04-2024",
+                    "expiration_date": "30-04-2024",
+                    "status": "Active",
+                    "attachment": "http://example.com/uploads/customer/Kenneth/favicon_1712287123.png",
+                    "description": "Write description"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-documents-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/sales/documents/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales document",
+            "account":"2",
+            "folder":"1",
+            "type":"2",
+            "opportunities":"2",
+            "status":"Active",
+            "publish_date":"2024-04-10",
+            "expiration_date":"2024-04-30",
+            "user_id":"24",
+            "description":"write description",
+            "attachment":"attach file"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-documents-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/sales/document/update/:document_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"sales document",
+            "account":"2",
+            "folder":"1",
+            "type":"2",
+            "opportunities":"2",
+            "status":"Active",
+            "publish_date":"2024-04-10",
+            "expiration_date":"2024-04-30",
+            "user_id":"24",
+            "description":"write description",
+            "attachment":"attach file"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Document Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "sales-documents-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/sales/document/delete/:document_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Document Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Sales Document Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    }
+}

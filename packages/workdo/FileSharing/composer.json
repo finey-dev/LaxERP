@@ -1,0 +1,27 @@
+{
+    "name": "workdo/file-sharing",
+    "description": "Description for file-sharing package",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "whichbrowser/parser": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Workdo\\FileSharing\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }   
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\FileSharing\\Providers\\FileSharingServiceProvider"
+            ]
+        }
+    }
+}

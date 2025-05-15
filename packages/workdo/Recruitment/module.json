@@ -1,0 +1,13 @@
+{
+    "name": "Recruitment",
+    "alias": "Recruitment",
+    "description": "",
+    "priority": 270,
+    "version": 3.8,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "child_module": [
+        "JobSearch"
+    ],
+    "package_name": "recruitment"
+}

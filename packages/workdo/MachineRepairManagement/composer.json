@@ -1,0 +1,26 @@
+{
+    "name": "workdo/machine-repair-management",
+    "description": "Description for machine-repair-management package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\MachineRepairManagement\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\MachineRepairManagement\\Providers\\MachineRepairManagementServiceProvider",
+                "Workdo\\MachineRepairManagement\\Providers\\ViewComposer"
+            ]
+        }
+    }
+}

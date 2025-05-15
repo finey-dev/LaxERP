@@ -1,0 +1,13 @@
+{
+    "name": "SWOTAnalysisModel",
+    "alias": "SWOT Analysis Model",
+    "description": "",
+    "priority": 1090,
+    "version": 1.4,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "swotanalysis-model",
+    "parent_module": [
+        "Planning"
+    ]
+}

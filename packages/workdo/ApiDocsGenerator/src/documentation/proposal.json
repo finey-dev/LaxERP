@@ -1,0 +1,207 @@
+{
+    "proposals-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/proposals",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "proposals": [
+                    {
+                        "id": 1,
+                        "issue_date": "2023-10-03",
+                        "send_date": null,
+                        "proposal_module": "account",
+                        "status": "Draft",
+                        "proposal_number": "#PROP000001"
+                    },
+                    {
+                        "id": 2,
+                        "issue_date": "2023-10-10",
+                        "send_date": null,
+                        "proposal_module": "taskly",
+                        "status": "Draft",
+                        "proposal_number": "#PROP000002"
+                    }
+                ]
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "product-proposal-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/proposal/show/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "proposal": {
+                    "id": 1,
+                    "proposal_number": "#PROP000001",
+                    "issue_date": "2023-10-03",
+                    "send_date": null,
+                    "proposal_module": "account",
+                    "status": "Draft"
+                },
+                "items": [
+                    {
+                        "id": 1,
+                        "product_name": "product",
+                        "tax_price": "$270.0",
+                        "quantity": 1,
+                        "price": "$1,500.0",
+                        "description": "Product Description",
+                        "tax": {
+                            "gst": 270
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "product_name": "product 1",
+                        "tax_price": "$538.2",
+                        "quantity": 1,
+                        "price": "$1,500.0",
+                        "description": "Product Description",
+                        "tax": {
+                            "gst": 538.2
+                        }
+                    }
+                ],
+                "customer": {
+                    "id": 1,
+                    "name": "john",
+                    "email": "john@gmail.com",
+                    "contact": "8989788789",
+                    "tax_number": "7898945",
+                    "billing_name": "132, my street",
+                    "billing_country": "bharat",
+                    "billing_state": "gujarat",
+                    "billing_city": "surat",
+                    "billing_phone": "7898945656",
+                    "billing_zip": "395010",
+                    "billing_address": "punagam ,surat.",
+                    "shipping_name": "132, my street",
+                    "shipping_country": "bharat",
+                    "shipping_state": "gujarat",
+                    "shipping_city": "surat",
+                    "shipping_phone": "7898945656",
+                    "shipping_zip": "395010",
+                    "shipping_address": "punagam ,surat.",
+                    "lang": "en",
+                    "balance": "$2,620.0",
+                    "electronic_address": "RFC 3271",
+                    "electronic_address_scheme": "RFC 3271121212"
+                },
+                "customFields": [
+                    {
+                        "name": "Field name",
+                        "field": "Field"
+                    }
+                ],
+                "sub_total": "$3,000.0",
+                "discount": "$10.0",
+                "tax": {
+                    "gst": 538.2
+                },
+                "total": "$3,528.2"
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Proposal Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "project-proposal-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/proposal/show/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "proposal": {
+                    "id": 1,
+                    "proposal_number": "#PROP000001",
+                    "issue_date": "2023-10-10",
+                    "send_date": null,
+                    "proposal_module": "taskly",
+                    "status": "Draft"
+                },
+                "items": [
+                    {
+                        "id": 3,
+                        "project_name": "project-name",
+                        "tax_price": "$198.0",
+                        "quantity": 1,
+                        "price": "$1,200.0",
+                        "description": null,
+                        "tax": {
+                            "gst": 198
+                        }
+                    }
+                ],
+                "customer": {
+                    "id": 1,
+                    "name": "john",
+                    "email": "john@gmail.com",
+                    "contact": "8989788789",
+                    "tax_number": "7898945",
+                    "billing_name": "132, my street",
+                    "billing_country": "bharat",
+                    "billing_state": "gujarat",
+                    "billing_city": "surat",
+                    "billing_phone": "7898945656",
+                    "billing_zip": "395010",
+                    "billing_address": "punagam ,surat.",
+                    "shipping_name": "132, my street",
+                    "shipping_country": "bharat",
+                    "shipping_state": "gujarat",
+                    "shipping_city": "surat",
+                    "shipping_phone": "7898945656",
+                    "shipping_zip": "395010",
+                    "shipping_address": "punagam ,surat.",
+                    "lang": "en",
+                    "balance": "$2,620.0",
+                    "electronic_address": "RFC 3271",
+                    "electronic_address_scheme": "RFC 3271121212"
+                },
+                "sub_total": "$1,200.0",
+                "discount": "$100.0",
+                "tax": {
+                    "gst": 198
+                },
+                "total": "$1,298.0"
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Proposal Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    }
+}

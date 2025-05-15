@@ -1,0 +1,25 @@
+{
+    "name": "workdo/team-workload",
+    "description": "Description for team-workload package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\TeamWorkload\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\TeamWorkload\\Providers\\TeamWorkloadServiceProvider"
+            ]
+        }
+    }
+}

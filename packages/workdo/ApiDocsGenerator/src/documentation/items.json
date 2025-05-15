@@ -1,0 +1,611 @@
+{
+    "product-category-list":{
+        "method"        : "GET",
+        "endpoints"     : "/api/:workspace_slug/product/category",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "clothes",
+                    "color": "#000000"
+                },
+                {
+                    "id": 2,
+                    "name": "Maintenance Sales",
+                    "color": "#000000"
+                },
+                {
+                    "id": 3,
+                    "name": "Rent Or Lease",
+                    "color": "#000000"
+                }
+            ]
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "product-category-create":{
+        "method"        : "POST",
+        "endpoints"     : "/api/:workspace_slug/product/category/create",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name" : "pents",
+            "color" : "#000000"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Category successfully created!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "product-category-update":{
+        "method"        : "PUT",
+        "endpoints"     : "/api/:workspace_slug/product/category/update/:category_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name" : "pents",
+            "color" : "#000000"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Category successfully updated!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Category Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "product-category-delete":{
+        "method"        : "DELETE",
+        "endpoints"     : "/api/:workspace_slug/product/category/delete/:category_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Category successfully deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Category Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "invoice-category-list":{
+        "method"        : "GET",
+        "endpoints"     : "/api/:workspace_slug/invoice/category",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "data": [
+                {
+                    "id": 3,
+                    "name": "Maintenance Sales",
+                    "account": "Service Income",
+                    "color": "#000000"
+                }
+            ]           
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "invoice-category-create":{
+        "method"        : "POST",
+        "endpoints"     : "/api/:workspace_slug/invoice/category/create",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name" : "Product Sales",
+            "chart_of_account":"1 \\ id of chart_of_account",
+            "color" : "#000000"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Category successfully created!"  
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "invoice-category-update":{
+        "method"        : "PUT",
+        "endpoints"     : "/api/:workspace_slug/invoice/category/update/:invoice_category_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name" : "Product Sales",
+            "chart_of_account":"1 \\ id of chart_of_account",
+            "color" : "#000000"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Category successfully updated!"  
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Invoice Category Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "invoice-category-delete":{
+        "method"        : "DELETE",
+        "endpoints"     : "/api/:workspace_slug/invoice/category/delete/:invoice_category_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+           
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Category successfully deleted!"  
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Invoice Category Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "bill-category-list":{
+        "method"        : "GET",
+        "endpoints"     : "/api/:workspace_slug/bill/category",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "data": [
+                {
+                    "id": 4,
+                    "name": "Rent Or Lease",
+                    "account": "Directors Fees & Remuneration",
+                    "color": "#000000"
+                }
+            ]           
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "bill-category-create":{
+        "method"        : "POST",
+        "endpoints"     : "/api/:workspace_slug/bill/category/create",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name" : "Travel",
+            "chart_of_account":"1 \\ id of chart_of_account",
+            "color" : "#000000"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Bill Category successfully created!"  
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "bill-category-update":{
+        "method"        : "PUT",
+        "endpoints"     : "/api/:workspace_slug/bill/category/update/:bill_category_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name" : "Travel",
+            "chart_of_account":"1 \\ id of chart_of_account",
+            "color" : "#000000"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Bill Category successfully updated!"  
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Bill Category Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "bill-category-delete":{
+        "method"        : "DELETE",
+        "endpoints"     : "/api/:workspace_slug/bill/category/delete/:bill_category_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+           
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Bill Category successfully deleted!"  
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Bill Category Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "tax-list":{
+        "method"        : "GET",
+        "endpoints"     : "/api/:workspace_slug/tax",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "GST",
+                    "rate": "10"
+                },
+                {
+                    "id": 2,
+                    "name": "SGST",
+                    "rate": "6"
+                }
+            ]
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "tax-create":{
+        "method"        : "POST",
+        "endpoints"     : "/api/:workspace_slug/tax/create",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name":"gst",
+            "rate":10
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Tax rate successfully created!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "tax-update":{
+        "method"        : "PUT",
+        "endpoints"     : "/api/:workspace_slug/tax/update/:tax_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name":"gst",
+            "rate":10
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Tax rate successfully updated!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Tax not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "tax-delete":{
+        "method"        : "DELETE",
+        "endpoints"     : "/api/:workspace_slug/tax/delete/:tax_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Tax rate successfully deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Tax not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "unit-list":{
+        "method"        : "GET",
+        "endpoints"     : "/api/:workspace_slug/units",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "10"
+                },
+                {
+                    "id": 2,
+                    "name": "50"
+                }
+            ]
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "unit-create":{
+        "method"        : "POST",
+        "endpoints"     : "/api/:workspace_slug/unit/create",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name":"unit name"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Unit successfully created!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "unit-update":{
+        "method"        : "PUT",
+        "endpoints"     : "/api/:workspace_slug/unit/update/:unit_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            "name":"unit name"
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Unit successfully updated!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Unit Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "unit-delete":{
+        "method"        : "DELETE",
+        "endpoints"     : "/api/:workspace_slug/unit/delete/:unit_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "message": "Unit successfully deleted!"
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Unit Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "product-list":{
+        "method"        : "GET",
+        "endpoints"     : "/api/:workspace_slug/products",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "data":[
+                {
+                    "id": 1,
+                    "name": "customer",
+                    "sku": "SKU-0000000",
+                    "sale_price": 122,
+                    "purchase_price": 12,
+                    "quantity": 2,
+                    "image": "http://example.com/uploads/products/1708430973_download_170140065392.jpeg",
+                    "type": "product",
+                    "description": "Description",
+                    "tax": "GST",
+                    "categorys": {
+                        "id": 1,
+                        "name": "clothes",
+                        "color": "#000000"
+                    },
+                    "units": {
+                        "id": 1,
+                        "name": "10"
+                    }
+                }
+            ]
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    },
+     "product-detail":{
+        "method"        : "GET",
+        "endpoints"     : "/api/:workspace_slug/product-detail/:product_id",
+        "header"        : {
+            "Accept" : "application/json",
+            "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request"       : {
+            
+        },
+        "success_response"      :{
+            "status": "success",
+            "data":{
+                "id": 1,
+                "name": "customer",
+                "sku": "SKU-000000",
+                "sale_price": 122,
+                "purchase_price": 12,
+                "image": "http://example.com/uploads/products/1708430973_download_170140065392.jpeg",
+                "quantity": 2,
+                "type": "product",
+                "description": "Description",
+                "categorys": {
+                    "id": 1,
+                    "name": "clothes",
+                    "color": "#000000"
+                },
+                "units": {
+                    "id": 1,
+                    "name": "10"
+                }
+            }
+        },
+        "error_response"        : {
+            "status": "error",
+            "message": "Product Not Found!"
+        },
+        "status_code"   :{
+            "success":"HTTP/1.1 200 OK",
+            "error":"HTTP/1.1 401 Unauthorized"
+        }
+    }
+}

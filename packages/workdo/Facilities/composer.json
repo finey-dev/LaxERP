@@ -1,0 +1,25 @@
+{
+    "name": "workdo/facilities",
+    "description": "Description for facilities package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\Facilities\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\Facilities\\Providers\\FacilitiesServiceProvider"
+            ]
+        }
+    }
+}

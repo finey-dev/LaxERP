@@ -1,0 +1,604 @@
+{
+    "employees-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/employees",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "sushant",
+                    "email": "sushant@gmail.com",
+                    "mobile_no": null,
+                    "avatar": "http://example.com/uploads/users-avatar/avatar.png",
+                    "dob": "1995-02-02",
+                    "gender": "Male",
+                    "phone": "+91 9898989898",
+                    "address": "surat",
+                    "branches_name": "silver",
+                    "departments_name": "laravel",
+                    "designations_name": "developer",
+                    "account_holder_name": null,
+                    "account_number": null,
+                    "bank_name": null,
+                    "bank_identifier_code": null,
+                    "branch_location": null,
+                    "salary_type": null,
+                    "salary": null
+                },
+                {
+                    "id": 2,
+                    "name": "employee",
+                    "email": "employee@gmail.com",
+                    "mobile_no": "9898989898",
+                    "avatar": "http://example.com/uploads/users-avatar/avatar.png",
+                    "dob": null,
+                    "gender": null,
+                    "phone": null,
+                    "address": null,
+                    "branches_name": null,
+                    "departments_name": null,
+                    "designations_name": null,
+                    "account_holder_name": null,
+                    "account_number": null,
+                    "bank_name": null,
+                    "bank_identifier_code": null,
+                    "branch_location": null,
+                    "salary_type": null,
+                    "salary": null
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "employees-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/emoployee-detail/:employee_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "name": "sushant",
+                "email": "sushant@gmail.com",
+                "mobile_no": null,
+                "avatar": "http://example.com/uploads/users-avatar/avatar.png",
+                "dob": "1995-02-02",
+                "gender": "Male",
+                "phone": "+91 9898989898",
+                "address": "surat",
+                "branches_name": null,
+                "departments_name": null,
+                "designations_name": null,
+                "account_holder_name": null,
+                "account_number": null,
+                "bank_name": null,
+                "bank_identifier_code": null,
+                "branch_location": null,
+                "salary_type": null,
+                "salary": null
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "salary-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/salary",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "sushant",
+                    "dob": "1995-02-02",
+                    "gender": "Male",
+                    "phone": "+91 9898989898",
+                    "address": "surat",
+                    "email": "sushant@gmail.com",
+                    "company_doj": "2024-02-02",
+                    "account_holder_name": null,
+                    "account_number": null,
+                    "bank_name": null,
+                    "bank_identifier_code": null,
+                    "branch_location": null,
+                    "tax_payer_id": null,
+                    "salary_type": null,
+                    "salary": null
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "salary-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/salary-detail/:salary_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "id": 1,
+                "name": "sushant",
+                "dob": "1995-02-02",
+                "gender": "Male",
+                "phone": "+91 9898989898",
+                "address": "surat",
+                "email": "sushant@gmail.com",
+                "company_doj": "2024-02-02",
+                "account_holder_name": null,
+                "account_number": null,
+                "bank_name": null,
+                "bank_identifier_code": null,
+                "branch_location": null,
+                "tax_payer_id": null,
+                "salary": "$120,000",
+                "salary_type": "monthly",
+                "allowances": [
+                    {
+                        "id": 1,
+                        "title": "allowance",
+                        "type": "fixed",
+                        "amount": "$1,200"
+                    }
+                ],
+                "commissions": [
+                    {
+                        "id": 1,
+                        "title": "commision",
+                        "type": "fixed",
+                        "amount": "$1,200"
+                    }
+                ],
+                "loans": [
+                    {
+                        "id": 1,
+                        "title": "home loan",
+                        "loan_option": "loan",
+                        "type": "fixed",
+                        "amount": "$1,200",
+                        "start_date": "2024-02-23",
+                        "end_date": "2024-02-23",
+                        "reason": "reason"
+                    }
+                ],
+                "saturationdeductions": [
+                    {
+                        "id": 1,
+                        "title": "deduction",
+                        "type": "fixed",
+                        "amount": "$1,200",
+                        "deduction_option": "deduction option"
+                    }
+                ],
+                "otherpayments": [
+                    {
+                        "id": 1,
+                        "title": "payment",
+                        "type": "fixed",
+                        "amount": "$1,200"
+                    }
+                ],
+                "overtimes": [
+                    {
+                        "id": 1,
+                        "title": "overtime",
+                        "type": null,
+                        "number_of_days": 15,
+                        "hours": 10,
+                        "rate": 12
+                    }
+                ]
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "attendance-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/attendance",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "date": "2024-02-09",
+                    "status": "Present",
+                    "clock_in": "17:13:00",
+                    "clock_out": "20:16:00",
+                    "late": "08:13:00",
+                    "early_leaving": "00:00:00",
+                    "overtime": "02:16:00",
+                    "total_rest": "00:00:00",
+                    "employees": {
+                        "name": "employee",
+                        "email": "employee@gmail.com"
+                    }
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "leaves-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/leaves",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "applied_on": "2024-02-23",
+                    "start_date": "2024-02-23",
+                    "end_date": "2024-02-23",
+                    "total_leave_days": "1",
+                    "leave_reason": "Leave reason",
+                    "remark": "remark",
+                    "status": "Pending",
+                    "employee_name": "employee name",
+                    "employee_dob": "1995-02-02",
+                    "leave_type": {
+                        "title": "casual",
+                        "days": 12
+                    }
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "awards-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/awards",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "date": "2024-02-23",
+                    "gift": "gift",
+                    "description": "description",
+                    "award_type": {
+                        "name": "award name"
+                    },
+                    "users": {
+                        "name": "user name",
+                        "email": "user email"
+                    }
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "transfer-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/transfers",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "transfer_date": "2024-02-23",
+                    "description": "description",
+                    "branch": {
+                        "name": "branch name"
+                    },
+                    "department": {
+                        "name": "department name"
+                    }
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "resignations-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/resignations",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data":[
+                {
+                    "id": 1,
+                    "resignation_date": "2024-02-23",
+                    "last_working_date": "2024-02-29",
+                    "description": "description"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "holidays-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/holidays",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data":[
+                {
+                    "id": 1,
+                    "start_date": "2024-03-02",
+                    "end_date": "2024-03-02",
+                    "occasion": "Public holidays"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "events-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/events",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "title": "event title",
+                    "start_date": "2024-02-23",
+                    "end_date": "2024-02-23",
+                    "description": "this is event description"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "documents-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/documents",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "document name",
+                    "document": "http://example.com/uploads/document/download_170140065392_1708673099.jpeg",
+                    "description": "description",
+                    "role_name": "role name"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "company-policy-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/company-policies",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "title": "title",
+                    "description": "description",
+                    "attachment": "http://example.com/uploads/companyPolicy/download_170140065392_1708678249.jpeg",
+                    "branch_name": "silver"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "branch-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/branches",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "silver"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "department-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/departments",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "department_name": "laravel",
+                    "branch_name": "silver"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "designation-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/designations",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "designation_name": "developer",
+                    "branch_name": "silver",
+                    "department_name": "laravel"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "FileSharing",
+    "alias": "File Sharing",
+    "description": "",
+    "priority": 560,
+    "version": 3.7,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "file-sharing"
+}

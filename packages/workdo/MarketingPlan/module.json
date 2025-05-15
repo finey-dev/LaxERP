@@ -1,0 +1,13 @@
+{
+    "name": "MarketingPlan",
+    "alias": "Marketing Plan",
+    "description": "Depending on Planning",
+    "priority": 1102,
+    "version": 1.4,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "marketing-plan",
+    "parent_module": [
+        "Planning"
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "pos-order-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/pos-orders",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "pos_date": "22-02-2024",
+                    "warehouse": {
+                        "id": 1,
+                        "name": "North Warehouse",
+                        "address": "723 N. Tillamook Street Portland, OR Portland, United States",
+                        "city": "Portland",
+                        "city_zip": "97227"
+                    },
+                    "pos_payment": {
+                        "id": 2,
+                        "amount": "$139",
+                        "discount": "$0",
+                        "date": null
+                    },
+                    "customer": {
+                        "id": 1,
+                        "name": "customer",
+                        "email": "customer@example.com",
+                        "contact": "9898989898",
+                        "tax_number": "Vf686FJVJ789415GBJ",
+                        "billing_name": "Office address",
+                        "billing_country": "India",
+                        "billing_state": "gujrat",
+                        "billing_city": "surat",
+                        "billing_phone": "7898945656",
+                        "billing_zip": "424242",
+                        "billing_address": "132, My Street",
+                        "shipping_name": "Office address",
+                        "shipping_country": "India",
+                        "shipping_state": "gujrat",
+                        "shipping_city": "surat",
+                        "shipping_phone": "7898945656",
+                        "shipping_zip": "424242",
+                        "shipping_address": "132, My Street",
+                        "balance": "$1,600",
+                        "credit_note_balance": "$100"
+                    }
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is Absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    }
+}

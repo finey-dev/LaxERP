@@ -1,0 +1,10 @@
+{
+    "name": "BeverageManagement",
+    "alias": "Beverages Production System",
+    "description": "Depending on ProductService",
+    "priority": 745,
+    "version": 1.8,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "beverage-management"
+}

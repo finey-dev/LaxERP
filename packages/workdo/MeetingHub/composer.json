@@ -1,0 +1,25 @@
+{
+    "name": "workdo/meeting-hub",
+    "description": "Description for meeting-hub package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\MeetingHub\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\MeetingHub\\Providers\\MeetingHubServiceProvider"
+            ]
+        }
+    }
+}

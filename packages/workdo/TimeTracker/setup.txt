@@ -1,0 +1,20 @@
+How to Use WorkDo Dash Desktop Application ?
+
+Follow these simple steps to download and install the desktop application on your Linux or Windows system.
+
+Step 1: Download the Application
+Click on the following link to download the desktop application:
+https://demo.workdo.io/desktop-app/workdo-dash-desktop-app.zip
+
+Step 2: Choose the Appropriate File for Your Operating System
+
+For Linux Users:
+Extract the downloaded zip file.
+Locate the deb file inside the extracted folder.
+
+For Windows Users:
+Extract the downloaded zip file.
+Find the 'windows' folder inside the extracted folder.
+Look for the exe file inside the 'windows' folder.
+
+

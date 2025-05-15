@@ -1,0 +1,25 @@
+{
+    "name": "workdo/fix-equipment",
+    "description": "Description for fix-equipment package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\FixEquipment\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\FixEquipment\\Providers\\FixEquipmentServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "workdo/visitor-management",
+    "description": "Description for visitor-management package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\VisitorManagement\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\VisitorManagement\\Providers\\VisitorManagementServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,566 @@
+{
+    "pipeline-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/pipelines",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "Sales"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "pipeline-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/pipeline/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "pipeline name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Pipeline Created Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "pipeline-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/pipeline/update/:pipeline_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "pipeline name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Pipeline Updated Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Pipeline Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "pipeline-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/pipeline/delete/:pipeline_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Pipeline Deleted Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Pipeline Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "lead-stage-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/lead/stages",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+
+        },
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "Sales",
+                    "stages": [
+                        {
+                            "id": 1,
+                            "name": "Draft",
+                            "order": 0
+                        },
+                        {
+                            "id": 2,
+                            "name": "Sent",
+                            "order": 0
+                        },
+                        {
+                            "id": 3,
+                            "name": "Open",
+                            "order": 0
+                        },
+                        {
+                            "id": 4,
+                            "name": "Revised",
+                            "order": 0
+                        },
+                        {
+                            "id": 5,
+                            "name": "Declined",
+                            "order": 0
+                        },
+                        {
+                            "id": 6,
+                            "name": "Accepted",
+                            "order": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Marketing",
+                    "stages": [
+                        {
+                            "id": 25,
+                            "name": "Sent",
+                            "order": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "lead-stage-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/lead/stage/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"pipeline name",
+            "order":0,
+            "pipeline_id":"9 \\ id of pipeline"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Stage Created Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Pipeline Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "lead-stage-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/lead/stage/update/:lead_stage_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"pipeline name",
+            "order":0,
+            "pipeline_id":"9 \\ id of pipeline"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Lead Stage Updated Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Stage Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "lead-stage-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/lead/stage/delete/:lead_stage_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Lead Stage Deleted Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Lead Stage Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "deal-stage-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/deal/stages",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "Sales",
+                    "stages": [
+                        {
+                            "id": 1,
+                            "name": "Initial Contact",
+                            "order": 0
+                        },
+                        {
+                            "id": 2,
+                            "name": "Qualification",
+                            "order": 0
+                        },
+                        {
+                            "id": 3,
+                            "name": "Meeting",
+                            "order": 0
+                        },
+                        {
+                            "id": 4,
+                            "name": "Proposal",
+                            "order": 0
+                        },
+                        {
+                            "id": 5,
+                            "name": "Close",
+                            "order": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Marketing",
+                    "stages": [
+                        {
+                            "id": 22,
+                            "name": "Sent",
+                            "order": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "deal-stage-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/deal/stage/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"deal stage name",
+            "pipeline_id":"9  \\ id of pipeline"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Deal Stage Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Pipeline Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "deal-stage-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/deal/stage/update/:deal_stage_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"deal stage name",
+            "pipeline_id":"9  \\ id of pipeline"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Deal Stage Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Deal Stage Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "deal-stage-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/deal/stage/delete/:deal_stage_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Deal Stage Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Deal Stage Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "labels-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/labels",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "Sales": [
+                    {
+                        "id": 1,
+                        "name": "label 1",
+                        "color": "primary"
+                    }
+                ]
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "labels-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/label/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "label 2",
+            "color" : "primary \\ must be in primary,secondary,danger,warning,info",
+            "pipeline_id" : "9 \\ id of pipeline"
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Label Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "labels-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/label/update/:label_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "label 2",
+            "color" : "primary \\ must be in primary,secondary,danger,warning,info",
+            "pipeline_id" : "9 \\ id of pipeline"
+        },
+        "success_response": {
+            "status": "success",
+            "message":"Label Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Label Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "labels-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/label/delete/:label_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message":"Label Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Label Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "sources-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/sources",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "sources name"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "sources-create": {
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/source/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "Source Name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Source Successfully Created!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "sources-update": {
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/source/update/:source_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name" : "Source Name"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Source Successfully Updated!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Source Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "sources-delete": {
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/source/delete/:source_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Source Successfully Deleted!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Source Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    }
+
+}

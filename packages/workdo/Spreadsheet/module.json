@@ -1,0 +1,10 @@
+{
+    "name": "Spreadsheet",
+    "alias": "Spreadsheet",
+    "description": "",
+    "priority": 550,
+    "version": 3.7,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "spreadsheet"
+}

@@ -1,0 +1,90 @@
+/********  */
+.theme-view-card.selected-theme .theme-card-inner {
+    box-shadow: 5px 4px 15px rgba(22, 44, 78, 0.25);
+}
+.theme-card-inner {
+    padding: 10px;
+    border: 1px solid #0CAF60;
+    border-radius: 15px !important;
+}
+.theme-card  .colorinput {
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+.theme-card .colorinput .colorinput-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.theme-card  .colorinput .colorinput-input:checked+.border-box {
+    border-color: #162C4E;
+}
+    .theme-card .colorinput-color{
+    border-radius: 50%;
+    }
+
+    .theme-card  .colorinput .border-box {
+        width: 31px;
+        height: 31px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        transition: all ease 0.3s;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+    }
+    .theme-card  .colorinput .colorinput-color {
+        border-color: #e4e6fc;
+        display: inline-block;
+        border-radius: 100%;
+        color: #fff;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+    }
+
+    .theme-card  .theme-card-inner .theme-image{
+        position: relative;
+        padding-top:25%;
+        height: 100%;
+    }
+    .theme-card  .theme-card-inner .theme-image img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .theme-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .theme-card-inner{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .theme-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+

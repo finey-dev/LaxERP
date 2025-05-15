@@ -1,0 +1,25 @@
+{
+    "name": "workdo/beverage-management",
+    "description": "Description for beverage-management package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\BeverageManagement\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\BeverageManagement\\Providers\\BeverageManagementServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "MachineRepairManagement",
+    "alias": "Machine Repair Management",
+    "description": "Depending on Product Service",
+    "priority": 1294,
+    "version": 1.7,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "parent_module": [
+        "ProductService"
+    ],
+    "package_name": "machine-repair-management"
+}

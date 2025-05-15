@@ -1,0 +1,25 @@
+{
+    "name": "workdo/swotanalysis-model",
+    "description": "Description for swotanalysis-model package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Workdo\\SWOTAnalysisModel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\SWOTAnalysisModel\\Providers\\SWOTAnalysisModelServiceProvider"
+            ]
+        }
+    }
+}

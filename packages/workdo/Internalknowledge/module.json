@@ -1,0 +1,10 @@
+{
+    "name": "Internalknowledge",
+    "alias": "Internal Knowledge (KB)",
+    "description": "",
+    "priority": 610,
+    "version": 3.6,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "internalknowledge"
+}

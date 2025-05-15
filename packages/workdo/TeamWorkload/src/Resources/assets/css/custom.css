@@ -1,0 +1,81 @@
+.set-card {
+    height: 300px !important;
+    overflow: auto;
+
+}
+
+.doc-description {
+    white-space: break-spaces !important;
+
+}
+.drp-language .dropdown-toggle{
+    color: #525B69;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 0.7rem;
+    margin: 0 7.5px;
+    border-radius: 4px;
+    position: relative;
+    font-weight: 500;
+    border-radius: 12px;
+    border: 1px solid rgba(206, 206, 206, 0.2);
+}
+
+
+.workload-input .form-group select{
+    min-width:235px;
+}
+.workload-input .form-group .input-group.date{
+    max-width:200px;
+}
+.card:not(.table-card) .table > thead > tr > th {
+    border-right: 1px solid #EBEBEB;
+    /* background-color: #F8F9FD; */
+}
+.card:not(.table-card) .table > tbody > tr > td {
+    border-right: 1px solid #EBEBEB;
+}
+.employ-name-box .employ-img img{
+    max-width:30px;
+    max-height:30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.employ-name-box .employ-name p{
+    font-weight:600;
+}
+.employ-name-box .employ-name span{
+    color:#989898;
+    font-size:12px;
+    font-weight: 600;
+}
+.table-cap-total ul{
+    max-width:250px;
+    font-weight: 600;
+}
+.table-cap-total ul li p{
+    max-width:66%;
+    width:100%;
+    text-align:right;
+}
+.table-cap-total ul li span{
+    font-weight: 500;
+    flex: 1;
+}
+
+@media (max-width:1650px) {
+    .workload-input .form-group select{
+        min-width:152px;
+    }
+}
+@media (max-width:400px) {
+    .workload-input .col-auto{
+        width:100%;
+    }
+    .workload-input .form-group .input-group.date {
+        max-width: 100%;
+    }
+}

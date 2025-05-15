@@ -1,0 +1,27 @@
+{
+    "name": "workdo/mail-box",
+    "description": "Description for mail-box package",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "webklex/laravel-imap": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Workdo\\MailBox\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WorkDo",
+            "email": "support@workdo.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workdo\\MailBox\\Providers\\MailBoxServiceProvider"
+            ]
+        }
+    }
+}

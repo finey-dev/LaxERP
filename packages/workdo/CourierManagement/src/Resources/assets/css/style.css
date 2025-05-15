@@ -1,0 +1,194 @@
+
+    /* --progress bar css -- */
+    #progressbar {
+        margin: 0px 0;
+        overflow: hidden;
+        color: rgb(88, 45, 206);
+        display: flex;
+        overflow-x: auto;
+        padding: 40px 0;
+    }
+
+    #progressbar .active {
+        color: red;
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 15px;
+        width: -webkit-fill-available;
+        float: left;
+        position: relative;
+        font-weight: 400;
+        text-align: center;
+        flex: 0 0 20%;
+        max-width: 20%;
+        width: 100%;
+    }
+
+    #progressbar #account:before {
+        font-family: FontAwesome;
+        content: "\f251"
+    }
+
+    #progressbar #personal:before {
+        font-family: FontAwesome;
+        content: "\f058"
+    }
+
+    #progressbar #payment:before {
+        font-family: FontAwesome;
+        content: "\f0d1"
+    }
+
+    #progressbar #confirm:before {
+        font-family: FontAwesome;
+        content: "\f110"
+    }
+
+    #progressbar #delivered:before {
+        font-family: FontAwesome;
+        content: "\f164"
+    }
+
+    #progressbar li:before {
+        width: 50px;
+        height: 50px;
+        line-height: 45px;
+        display: block;
+        font-size: 20px;
+        color: #f79999;
+        background: rgb(48, 147, 172);
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+        padding: 2px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #DCDCDC	;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: 0
+    }
+
+    #progressbar li.active:before,
+    #progressbar li.active:after {
+        background: green;
+    }
+    #progressbar li strong{
+        color: green;
+    }
+
+
+    #progressbar::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+    
+    /* Track */
+    #progressbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    /* Handle */
+    #progressbar::-webkit-scrollbar-thumb {
+        background: #DCDCDC;
+    }
+    .package-detail-info{
+        row-gap: 20px;
+    }
+   
+    .packege-progress{
+        margin: 0px 0;
+        overflow: hidden;
+        color: rgb(88, 45, 206);
+        display: flex;
+        overflow-x: auto;
+        padding: 40px 0;
+    }
+    .packege-progress li{
+        list-style-type: none;
+        font-size: 15px;
+        float: left;
+        position: relative;
+        font-weight: 400;
+        text-align: center;
+        flex: 0 0 20%;
+        max-width: 20%;
+        width: 100%;
+
+    }
+    .icon-div .icon-bg{
+        width: 50px;
+        height: 50px;
+        background: #DCDCDC;
+        border-radius: 50%;
+        display: inline-flex;
+        z-index: 1;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .progress-text p{
+        color: #DCDCDC;
+
+    }
+    .icon-div .icon-bg .ti{
+        color: #ffffff;
+        font-size: 22px;
+    }
+  
+    .icon-div{
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .icon-div:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #DCDCDC;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: 0;
+    }
+    .packege-progress li.active .icon-bg, 
+    .packege-progress li.active .icon-div:after {
+        background: green;
+    }
+    .packege-progress li.active .progress-text p{
+        color: #000000;
+
+    }
+     /* --progress bar  meadia css -- */
+     @media only screen and (max-width: 1300px) {
+        .packege-progress li {
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .packege-progress li {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 460px) {
+        .packege-progress li {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+        #progressbar::-webkit-scrollbar {
+            height: 7px;
+        }
+    }

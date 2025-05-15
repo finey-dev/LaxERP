@@ -1,0 +1,841 @@
+{
+    "projects-list": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/projects",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "project-name",
+                    "status": "Ongoing",
+                    "description": "Project description",
+                    "start_date": "2023-10-03",
+                    "end_date": "2023-10-20",
+                    "budget": "$0.0",
+                    "users": [
+                        {
+                            "name": "User-name",
+                            "email": "username@example.com",
+                            "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "projects-create":{
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/projects/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"project name",
+            "budget":100,
+            "start_date":"2024-02-02",
+            "end_date":"2024-02-29",
+            "description":"Add description for project",
+            "users_list":[
+                "test@example.com"
+            ]
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Project Created Successfully"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "project-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/project/show/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "project": {
+                    "id": 1,
+                    "name": "project",
+                    "status": "Ongoing",
+                    "description": "this priority is very high",
+                    "start_date": "2023-10-03",
+                    "end_date": "2023-10-20",
+                    "budget": "$0.0",
+                    "tags": null,
+                    "estimated_hrs": 50,
+                    "total_task": 1,
+                    "total_comment": 0,
+                    "users": [
+                        {
+                            "name": "User-name",
+                            "email": "username@example.com",
+                            "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                        }
+                    ],
+                    "clients": [
+                        {
+                            "name": "dustin",
+                            "email": "dustindean@gmail.com"
+                        },
+                        {
+                            "name": "harry",
+                            "email": "harryzafar@gmail.com"
+                        }
+                    ],
+                    "milestones": [
+                        {
+                            "title": "milestone",
+                            "status": "incomplete",
+                            "start_date": "2023-10-03",
+                            "end_date": "2023-10-03",
+                            "progress": "25",
+                            "cost": "$1,200.0"
+                        }
+                    ]
+                },
+                "daysleft": -7,
+                "chartData": {
+                    "1": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "2": [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "3": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "4": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "label": [
+                        "Mon",
+                        "Tue",
+                        "Wed",
+                        "Thu",
+                        "Fri",
+                        "Sat",
+                        "Sun"
+                    ],
+                    "color": [
+                        "#051c4b",
+                        "#051c4b",
+                        "#051c4b",
+                        "#051c4b"
+                    ],
+                    "stages": {
+                        "1": "Todo",
+                        "2": "In Progress",
+                        "3": "Review",
+                        "4": "Done"
+                    }
+                }
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Project Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "project-update":{
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/project/update/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "name":"project name",
+            "budget":100,
+            "start_date":"2024-02-02",
+            "end_date":"2024-02-29",
+            "description":"Add description for project",
+            "users_list":[
+                "test@example.com"
+            ]
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Project Updated Successfully"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "project-delete":{
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/project/delete/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Project Deleted Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Token is absent"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "project-task-board": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/project/:project_id/task-board",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "project": {
+                    "id": 1
+                },
+                "stages": [
+                    {
+                        "id": 1,
+                        "name": "Todo",
+                        "color": "#051c4b",
+                        "complete": 0,
+                        "order": 0,
+                        "tasks": [
+                            {
+                                "id": 1,
+                                "title": "Dashboard Cards",
+                                "priority": "Low",
+                                "description": "Task Description",
+                                "start_date": "2023-10-11 00:00:00",
+                                "due_date": "2023-11-16 00:00:00",
+                                "users": [
+                                    {
+                                        "id": 1,
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "In Progress",
+                        "color": "#051c4b",
+                        "complete": 0,
+                        "order": 0,
+                        "tasks": [
+                            {
+                                "id": 2,
+                                "title": "Create the App's wireframe",
+                                "priority": "Low",
+                                "description": "Task Description",
+                                "start_date": "2023-10-06 00:00:00",
+                                "due_date": "2023-11-14 00:00:00",
+                                "users": [
+                                    {
+                                        "id": 2,
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "Review",
+                        "color": "#051c4b",
+                        "complete": 0,
+                        "order": 0,
+                        "tasks": [
+                            {
+                                "id": 3,
+                                "title": "Finish Logo Design",
+                                "priority": "High",
+                                "description": "Task Description",
+                                "start_date": "2023-10-01 00:00:00",
+                                "due_date": "2023-11-10 00:00:00",
+                                "users": [
+                                    {
+                                        "id": 3,
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "name": "Done",
+                        "color": "#051c4b",
+                        "complete": 0,
+                        "order": 0,
+                        "tasks": [
+                            {
+                                "id": 4,
+                                "title": "Lunch Meeting",
+                                "priority": "Medium",
+                                "description": "Task Description",
+                                "start_date": "2023-10-10 00:00:00",
+                                "due_date": "2023-11-15 00:00:00",
+                                "users": [
+                                    {
+                                        "id": 4,
+                                        "name": "User-name",
+                                        "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "statusClass": [
+                    "task-list-1",
+                    "task-list-2",
+                    "task-list-3",
+                    "task-list-4"
+                ]
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Task Note Found For This Project."
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "request-milestone":{
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/project/milestone/:id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [{
+                "id": 1,
+                "title": "milestone title",
+                "status": "incomplete",
+                "cost": 10,
+                "summary": "summary"
+            }]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Project Not Found"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "task-create":{
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/project/:id/task/create",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "title":"task title",
+            "priority":"low",
+            "milestone_id":"1",
+            "start_date":"2022-02-02",
+            "due_date":"2024-02-25",
+            "assign_to":[
+               "1","2"
+            ]
+
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Task Create Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Project Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "project-task-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/project/task/show/:task_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "task": {
+                    "id": 1,
+                    "title": "Dashboard Cards",
+                    "priority": "Low",
+                    "description": "Task Description",
+                    "start_date": "2023-10-11 00:00:00",
+                    "due_date": "2023-11-16 00:00:00",
+                    "users": [
+                        {
+                            "id": 1,
+                            "name": "User-name",
+                            "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                        }
+                    ],
+                    "milestone": "milestone",
+                    "comments": [
+                        {
+                            "id": 1,
+                            "comment": "comment",
+                            "user_name": "User-name",
+                            "avatar": "https://example.com/uploads/users-avatar/avatar.png"
+                        }
+                    ],
+                    "files": [
+                        {
+                            "file": "https://example.com/uploads/tasks/filename.png"
+                        }
+                    ],
+                    "sub_task": [
+                        {
+                            "name": "sub-task-name",
+                            "due_date": "12-10-2023",
+                            "status": "1"
+                        }
+                    ]
+                }
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Task Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "task-update":{
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/project/:projectid/task/update/:taskid",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "title":"task-title",
+            "priority":"low",
+            "milestone_id":"1",
+            "start_date":"2023-02-02",
+            "due_date":"2025-02-25",
+            "assign_to":[
+               "1","2"
+            ]
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Task Updated Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Task Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "task-delete":{
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/project/:projectid/task/delete/:taskid",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Task Deleted Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Task Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "bug-status-list":{
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/bug-status-list",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "Unconfirmed"
+                },
+                {
+                    "id": 2,
+                    "name": "Confirmed"
+                },
+                {
+                    "id": 3,
+                    "name": "In Progress"
+                },
+                {
+                    "id": 4,
+                    "name": "Resolved"
+                },
+                {
+                    "id": 5,
+                    "name": "Verified"
+                }
+            ]
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Slug Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "project-bug-create":{
+        "method": "POST",
+        "endpoints": "/api/:workspace_slug/project/bug-report/create/:project_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "title":"bug title",
+            "priority":"low",
+            "status":"Unconfirmed",
+            "assign_to":"1",
+            "description":"Write Description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Bug Created Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Bug Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+
+    },
+    "project-bug-report": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/project/bug-report/:project_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "project": {
+                    "id": 1
+                },
+                "stages": [
+                    {
+                        "id": 1,
+                        "name": "Unconfirmed",
+                        "color": "#051c4b",
+                        "bugs": [
+                            {
+                                "id": 1,
+                                "title": "Validation remaining",
+                                "priority": "Low",
+                                "description": "Bug Description",
+                                "order": 0,
+                                "users": {
+                                    "id": 1,
+                                    "name": "User-name",
+                                    "avatar": "http://example.com/uploads/users-avatar/avatar.png"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Confirmed",
+                        "color": "#051c4b",
+                        "bugs": [
+                            {
+                                "id": 2,
+                                "title": "Login page failure",
+                                "priority": "Low",
+                                "description": "Bug Description",
+                                "order": 0,
+                                "users": {
+                                    "id": 2,
+                                    "name": "User-name",
+                                    "avatar": "http://example.com/uploads/users-avatar/avatar.png"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "In Progress",
+                        "color": "#051c4b",
+                        "bugs": [
+                            {
+                                "id": 3,
+                                "title": "Forgot password error",
+                                "priority": "Medium",
+                                "description": "Bug Description",
+                                "order": 0,
+                                "users": {
+                                    "id": 3,
+                                    "name": "User-name",
+                                    "avatar": "http://example.com/uploads/users-avatar/avatar.png"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "name": "Resolved",
+                        "color": "#051c4b",
+                        "bugs": [
+                            {
+                                "id": 4,
+                                "title": "Design layouts issue",
+                                "priority": "Low",
+                                "description": "Bug Description",
+                                "order": 0,
+                                "users": {
+                                    "id": 4,
+                                    "name": "User-name",
+                                    "avatar": "http://example.com/uploads/users-avatar/avatar.png"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "name": "Verified",
+                        "color": "#051c4b",
+                        "bugs": [
+                            {
+                                "id": 5,
+                                "title": "Api issue",
+                                "priority": "High",
+                                "description": "Bug Description",
+                                "order": 0,
+                                "users": {
+                                    "id": 5,
+                                    "name": "User-name",
+                                    "avatar": "http://example.com/uploads/users-avatar/avatar.png"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "statusClass": [
+                    "task-list-1",
+                    "task-list-2",
+                    "task-list-3",
+                    "task-list-4",
+                    "task-list-5"
+                ]
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Bug Not Found For This Project."
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "project-bug-detail": {
+        "method": "GET",
+        "endpoints": "/api/:workspace_slug/project/bug-report/show/:bug_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "data": {
+                "bug": {
+                    "id": 1,
+                    "title": "Validation remaining",
+                    "description": "Bug Description",
+                    "start_date": "03-10-2023",
+                    "user": {
+                        "id": 1,
+                        "name": "User-name",
+                        "avatar": "http://example.com/uploads/users-avatar/avatar.png"
+                    }
+                },
+                "comments": [
+                    {
+                        "user_name": "User-name",
+                        "avatar": "http://example.com/uploads/users-avatar/avatar.png",
+                        "comment": "user-comments"
+                    }
+                ],
+                "files": [
+                    {
+                      "file": "https://example.com/uploads/tasks/filename.png"
+                    }
+                ]
+            }
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Bug Not Found For This Project"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 404 Not Found"
+        }
+    },
+    "project-bug-update":{
+        "method": "PUT",
+        "endpoints": "/api/:workspace_slug/project/:project_id/bug-report/update/:bug_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {
+            "title":"bug title",
+            "priority":"low",
+            "status":"Unconfirmed",
+            "assign_to":"34",
+            "description":"Write Description"
+        },
+        "success_response": {
+            "status": "success",
+            "message": "Bug Updated Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Bug Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    },
+    "project-bug-delete":{
+        "method": "DELETE",
+        "endpoints": "/api/:workspace_slug/project/:project_id/bug-report/delete/:bug_id",
+        "header": {
+            "Accept": "application/json",
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz..."
+        },
+        "request": {},
+        "success_response": {
+            "status": "success",
+            "message": "Bug Deleted Successfully!"
+        },
+        "error_response": {
+            "status": "error",
+            "message": "Bug Not Found!"
+        },
+        "status_code": {
+            "success": "HTTP/1.1 200 OK",
+            "error": "HTTP/1.1 401 Unauthorized"
+        }
+    }
+}

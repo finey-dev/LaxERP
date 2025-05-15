@@ -1,0 +1,9 @@
+{
+    "name": "VisitorManagement",
+    "alias": "Visitor Management ",
+    "description": "",
+    "keywords": [],
+    "priority": 1285,
+    "version": 1.4,
+    "package_name": "visitor-management"
+}
